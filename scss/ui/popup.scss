@@ -1,0 +1,14 @@
+.popup{
+  display: block;
+  min-width: 500px;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+
+  @media (max-width: $mobile) {
+    min-width: 300px;
+    max-width: 480px;
+    width: 90%;
+  }
+}

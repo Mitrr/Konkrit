@@ -1,0 +1,42 @@
+/*
+
+Icons
+
+*/
+
+[class^="icon-"], [class*=" icon-"] {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 0;
+    background: center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    position: relative;
+    text-decoration: none;
+    width: auto;
+    line-height: 1;
+    letter-spacing: 0;
+    margin-right: 0;
+    margin-left: 0;
+    background: center center no-repeat;
+    background-size: contain;
+}
+
+[class^="icon-"]:after, [class*=" icon-"]:after {
+    background: center center no-repeat;
+    background-size: contain;
+}
+
+.icon-right-open-big:before { content: '\e800'; } /* '' */
+.icon-svg1:before { content: '\e803'; } /* '' */
+.icon-svg2:before { content: '\e804'; } /* '' */
+.icon-svg3:before { content: '\e805'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
+.icon-vkontakte:before { content: '\f189'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */

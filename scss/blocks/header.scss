@@ -1,0 +1,562 @@
+.header{
+  width: 100%;
+  &:before {
+    content: '';
+    top: 200px;
+    left: 0;
+    right: 0;
+    background-image: url(../../img/HF_K83WnCT4.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 166%;
+    height: 553px;
+    position: absolute;
+  }
+
+  @media (max-width: $tablet) {
+    height: 634px;
+  }
+  .container .header-offer-main {
+    display: flex;
+    .header-offer-left, .header-offer-right {
+      flex: 1;
+    }
+    .header-offer-left {
+      .header-offer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        // background-color: white;
+        .social-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex: 1;
+          .social-phone {
+            display: flex;
+            flex-direction: column;
+          }
+          .social-adress {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        h1 {
+          flex: 1 ;
+        }
+      }
+    }
+    .header-offer-right {
+      .header-offer-text {
+        padding: 25px 23px;
+        line-height: 24px;
+      }
+    }
+  }
+  &.fixed{
+    padding-top: 52px;
+    .header-top{
+      position: fixed;
+      top:0;
+      z-index: 50;
+      width: 100%;
+      padding: 0 10%;
+      left: 0;
+      transition: all 0.3s;
+      height: 66px;
+      box-shadow: 0 0 10px $color5;
+      @media (max-width: $screen) {
+        padding: 0 5%;
+      }
+      @media (max-width: $tablet) {
+        padding: 0 2%;
+      }
+
+      .header-menu{
+
+        width: 50%;
+
+        &:before{
+          position: absolute;
+          z-index: 0;
+          width: 1000%;
+          left: 0;
+          background: $color2;
+          height: 100%;
+          content: '';
+        }
+        @media (max-width: $tablet) {
+          top: 60px;
+        }
+      }
+
+    }
+  }
+
+  &-top{
+    background: $color1;
+    height: 66px;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      padding: 0 2%;
+      height: 66px;
+    }
+
+  }
+
+
+
+  &-logo{
+    width: 160px;
+
+    a{
+      color: $color7;
+      text-decoration: none;
+      display: block;
+
+      &:first-child{
+        width: 48px;
+      }
+      &:last-child{
+        width: 100px;
+        padding-top: 5px;
+
+
+        span{
+          &:first-child{
+            font-weight: 300;
+            font-size: 8px;
+            display: block;
+            margin-bottom: 4px;
+          }
+          &:last-child{
+            display: block;
+            font-weight: 600;
+            font-family: $font2;
+            font-size: 23px;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &-left{
+    // min-width: 600px;
+  }
+
+  &-menu{
+    width: 50%;
+    background: rgba($color2,0.7);
+    height: 100%;
+    padding: 0 25px;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      position: fixed;
+      padding-top: 0;
+      top: 60px;
+      z-index: 500;
+      left: 140%;
+      width: 40%;
+      height: 100vh;
+      transition: all 0.9s;
+      overflow: hidden;
+      background: rgba($color0,0.9);
+    }
+
+    @media (max-width: $mobile) {
+      width: 50%;
+
+    }
+    @media (max-width: $mobile_small) {
+      width: 70%;
+
+    }
+
+    &.active{
+      @media (max-width: $tablet) {
+        left: 60%;
+      }
+      @media (max-width: $mobile) {
+        left: 50%;
+
+      }
+      @media (max-width: $mobile_small) {
+        left: 30%;
+
+      }
+    }
+
+    .cols{
+      height: 100%;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    a{
+      font-family: $font2;
+      color: $color1;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.7px;
+
+      &.icon-svg1{
+        font-size: 24px;
+        transform: translateY(-1px);
+      }
+
+      &:hover{
+        color: $color0;
+      }
+      @media (max-width: $tablet) {
+        display: block;
+        margin: 20px 0;
+      }
+    }
+  }
+  &-offer{
+    height: 574px;
+
+    &--img{
+      width: 548px;
+      background: rgba($color3,0.8);
+      height: 100%;
+      position: relative;
+      @media (max-width: $tablet) {
+       width: 50%;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+      &-abs{
+        position: absolute;
+        top:0;
+        left: 0;
+        @media (max-width: $tablet) {
+          width: calc(100% - 77px);
+          height: 100%;
+          background-position: 50% 0;
+
+        }
+
+        img{
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+      }
+      &-loc{
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        color: #fff;
+        font-size: 10px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: 500;
+
+        .icon{
+          font-size: 28px;
+          margin-right: 12px;
+        }
+      }
+      &-lined{
+        background: url("../img/bg2.svg") 0 0;
+        width: 77px;
+        height: 78px;
+        position: absolute;
+        bottom: 0;
+        right: -77px;
+      }
+      &-soc{
+        position: absolute;
+        right: 28px;
+        top: 30px;
+        text-align: center;
+
+        a{
+          display: block;
+          font-size: 20px;
+          margin-bottom: 23px;
+          color: #fff;
+        }
+      }
+    }
+    &--text{
+      padding-top: 84px;
+      width: 480px;
+
+      @media (max-width: $tablet) {
+        width: 50%;
+
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+
+      &-caption{
+        padding-top: 80px;
+        @media (max-width: $tablet) {
+          padding-left: 10%;
+
+        }
+        @media (max-width: $mobile) {
+          text-align: center;
+          padding-left: 0;
+          padding-top: 60px;
+        }
+        @media (max-width: $mobile_small) {
+          text-align: center;
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+.form-header{
+  text-align: right;
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+  form{
+    max-width: 354px;
+    display: inline-block;
+    border: 5px solid rgba($color3,0.8);
+    background: rgba($color1,0.5);
+    padding: 28px;
+  }
+}
+
+
+
+
+.hamburglar {
+  cursor: pointer;
+  display: block;
+  height: 49px;
+  position: relative;
+  -webkit-touch-callout: none;
+  transform: scale(1);
+  user-select: none;
+  width: 49px;
+}
+
+
+.burger {
+
+  &-icon {
+    position: absolute;
+    padding: 11px 7px;
+    height: 49px;
+    width: 49px;
+  }
+
+  &-container {
+    position: relative;
+    height: 28px;
+    width: 36px;
+  }
+
+  &-bun-top,
+  &-bun-bot,
+  &-filling {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 36px;
+    background: $color1;
+  }
+
+  &-bun-top {
+    top: 0;
+    transform-origin: 34px 2px;
+  }
+
+  &-bun-bot {
+    bottom: 0;
+    transform-origin: 34px 2px;
+  }
+
+  //.burger-filling {
+  //  @include transition(all,($animation/2.5),ease-in-//out);
+  //}
+  // relative parent is the button
+  &-filling {
+    top: 12px;
+  }
+
+}
+
+
+// bun animations
+.hamburglar.is-open {
+  .burger-bun-top {
+    animation: bun-top-out 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+  .burger-bun-bot {
+    animation: bun-bot-out 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+.hamburglar.is-closed {
+  .burger-bun-top {
+    animation: bun-top-in 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+  .burger-bun-bot {
+    animation: bun-bot-in 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+@keyframes bun-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-60deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes bun-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px;
+    transform: rotate(60deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+
+@keyframes bun-top-in {
+  0% {
+    left: -5px;
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bottom: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bottom: 0;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 0;
+    bottom: 1px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bun-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bottom: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bottom: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+
+// burger filling
+.hamburglar.is-open {
+  .burger-filling {
+    animation: burger-fill-out 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+.hamburglar.is-closed {
+  .burger-filling {
+    animation: burger-fill-in 0.6s linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+@keyframes burger-fill-in {
+  0% {
+    width: 0;
+    left: 36px;
+  }
+  40% {
+    width: 0;
+    left: 40px;
+  }
+  80% {
+    width: 36px;
+    left: -6px;
+  }
+  100% {
+    width: 36px;
+    left: 0px;
+  }
+}
+
+@keyframes burger-fill-out {
+  0% {
+    width: 36px;
+    left: 0px;
+  }
+  20% {
+    width: 42px;
+    left: -6px;
+  }
+
+  40% {
+    width: 0;
+    left: 40px;
+  }
+
+  100% {
+    width: 0;
+    left: 36px;
+  }
+}

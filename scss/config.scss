@@ -1,0 +1,60 @@
+@import "bourbon/bourbon";
+@import "mixins";
+
+$color0: #000000;
+$color1: #ffffff;
+$color2: #82bac3;
+$color3: #f1f4f4;
+$color4: #a3a2a2;
+$color5: #838383;
+$color6: #585858;
+$color7: #323232;
+
+$ts: 0.3s;
+
+@include font-face("BebasNeue", '../font/BebasNeueBold', 600, normal, $file-formats: eot woff svg);
+@include font-face("BebasNeue", '../font/BebasNeueRegular', 400, normal, $file-formats: eot woff svg);
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/icon/fontello/fontello.eot?53199875');
+  src: url('../font/icon/fontello/fontello.eot?53199875#iefix') format('embedded-opentype'),
+  url('../font/icon/fontello/fontello.woff2?53199875') format('woff2'),
+  url('../font/icon/fontello/fontello.woff?53199875') format('woff'),
+  url('../font/icon/fontello/fontello.ttf?53199875') format('truetype'),
+  url('../font/icon/fontello/fontello.svg?53199875#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font1: 'Roboto', sans-serif;
+$font2: 'BebasNeue', sans-serif;
+
+
+$screen_large: 1440px;
+$screen: 1250px;
+$tablet: 1070px;
+$mobile: 780px;
+$mobile_small: 480px;
+$mobile_xsmall: 359px;
+
+
+// easings
+$ease-cb: cubic-bezier(.4,0,.2,1);
+$ease-cb-2: cubic-bezier(.19,1,.22,1);
+$ease-cb-3: cubic-bezier(.77,0,.175,1);
+$ease-cb-4: cubic-bezier(.99,1,.92,1);
+//------------------------------
+//  nth-trans-delay()
+//  Transition Delay on nth-childs
+//  @param: $delay_items: number of nth-of-type items to create
+//  @param: $delay_time: transition-dealy value
+//-----------------------------
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      transition-delay: $delay_time * $i;
+    }
+  }
+}

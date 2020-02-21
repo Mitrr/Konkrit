@@ -1,0 +1,148 @@
+/*
+
+Checkboxes
+
+*/
+
+
+.checkboxes {
+    @include clearfix;
+    margin-top: 18px;
+    text-align: left;
+
+    & + .form__error {
+        padding-left: 30px;
+    }
+
+    &__inner {
+        float: left;
+        width: 100%;
+        margin-bottom: -12px;
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+    text-align: left;
+    font-size: 11px;
+    color: $color0;
+    cursor: pointer;
+    transition: all $ts;
+
+    a{
+        color: $color0;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 12px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: solid 1px #000;
+        background-color: transparent;
+        content: '';
+        transition: all $ts;
+        transform: translateY(-50%);
+
+        @media (max-width: $mobile) {
+            top: 3px;
+        }
+    }
+
+    & > input[type='radio'],
+    & > input[type='checkbox'] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+
+
+    }
+
+    &.focused {
+
+
+    }
+
+    &.disabled {
+        cursor: default;
+        cursor: not-allowed;
+
+        .checkbox__icon {
+            border-color: #ebebeb;
+            background-color: #ebebeb;
+            box-shadow: none;
+        }
+    }
+
+    .form__error {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.checkbox.checked .checkbox__icon:before,
+.checkbox-plain-js.checked .checkbox__icon:before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top:40%;
+    left:40%;
+    transform: translate(-50%,-50%);
+    font-family: "fontello";
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: 0;
+    margin-right: 0;
+    background: center center no-repeat;
+    background-size: contain;
+    content: '\e801';
+    font-size: 15px;
+}
+
+.checkbox--radio {
+
+    .checkbox__icon {
+        border-radius: 50%;
+    }
+}
+
+.checkbox--block {
+    width: 100%;
+    margin-right: 0;
+}
+
+.checkbox--inline {
+    display: inline;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.checkbox--separate {
+    width: 20px;
+    height: 20px;
+    padding-left: 0;
+    margin: -6px 0;
+    user-select: none;
+
+    .checkbox__icon {
+        top: 0;
+
+        &:after {
+            top: 7px;
+        }
+    }
+}
