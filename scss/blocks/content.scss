@@ -2,7 +2,8 @@
   color: $color2;
 }
 .slogan-line {
-  background-image: url('../../img/photo-1471107555852-6e971d283995.jpg');
+  // background-image: url('../../img/photo-1471107555852-6e971d283995.jpg');
+  background-image: url('../../img/sloy3.jpg');
   position: relative;
   &:before{
     content: '';
@@ -11,7 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(99, 94, 94, 0.603);
+    // background-color: rgba(99, 94, 94, 0.603);
   }
 }
 .slogan{
@@ -209,6 +210,263 @@
       }
     }
   }
+}
+.slogan-line-2 {
+  // background-image: url('../../img/photo-1471107555852-6e971d283995.jpg');
+  background-image: url('../../img/sloy4.jpg');
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.slogan-2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 25px 50px 25px;
+  // justify-content: space-between;
+  color: #ffffff;
+
+
+  @media (max-width: $tablet) {
+    text-align: center;
+  }
+
+  .h1{
+    // color: #a3a2a2;
+    color: #ffffff;
+    margin-bottom: 0px;
+  }
+  &-caption{
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.doma {
+  &-examples {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    .doma-item {
+      overflow: hidden;
+      height: 400px;
+      position: relative;
+      width: 100%;
+      img {
+        // max-width: 579px;
+        // height: 475px;
+        max-width: 580px;
+        height: 560px;
+        left: -270px;
+        position: absolute;
+        filter: grayscale(0.9);
+        transition: ease .4s;
+        &:hover {
+          filter: none;
+        }
+      }
+      p {
+        font-family: "BebasNeueBold";
+        font-size: 13px;
+        line-height: 1.125;
+        position: absolute;
+        color: #000000;
+        letter-spacing: -0.5px;
+        font-weight: 500;
+        padding: 5px;
+        text-align: right;
+        text-transform: uppercase;
+        right: 0;
+        
+      }
+    }
+  }
+  .about-blue-line {
+    position: relative;
+    background-color: #82bac38c;
+    
+  }
+  &-about {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    p {
+      padding: 50px 80px;
+      width: 750px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+.blog-news {
+  position: relative;
+  .container {
+    display: flex;
+  }
+  .blog-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+    .blog-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      p{
+        margin: 0;
+      }
+      .blog-header p{
+        font-size: 24px;
+        font-family: "BebasNeueBold";
+        text-transform: uppercase;
+        line-height: 28px;
+        color: #585858;
+        padding-top: 85px;
+        margin-block-start: 0;
+      }
+      .blog-subheader p{
+        font-size: 14px;
+        // padding-top: 10px;
+        font-family: "Roboto";
+        color: rgb(88, 88, 88);      
+      }
+      .blog-date p{
+        font-size: 12px;
+        padding-top: 30px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        
+      }
+      .blog-text p{
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        line-height: 24px;
+        padding-top: 40px;
+        padding-right: 80px;
+      }
+      .blog-nav {
+        font-size: 16px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        
+      }
+    }
+  }
+  .blog-inform {
+    position: relative;
+    // background-image: url('../../img/sloy5.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // width: 370px;
+    
+    flex: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -580px;
+      right: -35px;
+      background-color: #82bac3e0;
+      width: 370px;
+      height: 600px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -35px;
+      background: url('../../img/sloy5.jpg') no-repeat;
+      // background-repeat: no-repeat;
+      background-size: cover;
+      width: 370px;
+      height: 500px;
+      
+    }
+    .wrap-inform {
+      position: absolute;
+      top: -150px;
+      left: 9px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 520px;
+      width: 100%;
+      z-index: 1;
+      border: 2px solid;
+      border-image: linear-gradient(to bottom, #f9f9f9, rgb(33, 33, 33)) 1 1 21%;
+      .inform-up  {
+        align-self: flex-start;
+        padding: 0 30px;
+        color: white;
+        p {
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+        span {
+          font-size: 13px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 54px;
+          right: 18px;
+          height: 3px;
+          width: 45px;
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 85px;
+          right: 18px;
+          height: 3px;
+          width: 45px;
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+      .inform-middle p {
+        text-align: right;
+      }
+      .inform-down {
+        text-align: right;
+        align-self: flex-end;
+        padding: 0 30px;
+        p {
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+        span {
+          font-size: 13px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 72px;
+          left: 43px;
+          height: 3px;
+          width: 45px;
+          background-color: black;
+          transform: rotate(45deg);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 103px;
+          left: 43px;
+          height: 3px;
+          width: 45px;
+          background-color: black;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  
 }
 .why{
   height: 465px;
