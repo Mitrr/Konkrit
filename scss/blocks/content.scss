@@ -317,13 +317,16 @@
         margin: 0;
       }
       .blog-header p{
-        font-size: 24px;
-        font-family: "BebasNeueBold";
-        text-transform: uppercase;
-        line-height: 28px;
-        color: #585858;
         padding-top: 85px;
         margin-block-start: 0;
+        font-family: "BebasNeue", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #585858;
+        // margin: 0 0 25px 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
       }
       .blog-subheader p{
         font-size: 14px;
@@ -465,8 +468,268 @@
         }
       }
     }
+  }  
+}
+.projects {
+  position: relative;
+  background-color: #e6f1f3;
+  .container {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 45px;
+      left: 0;
+      height: 3px;
+      width: 50px;
+      background-color: #82bac3e0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: -24px;
+      height: 3px;
+      width: 50px;
+      background-color: #82bac3e0;
+      transform: rotate(90deg);
+    }
   }
-  
+  .wrapper-all {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .wrap-foot {
+      position: relative;
+      display: flex;
+      max-width: 969px;
+      justify-content: center;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      margin-bottom: 90px;
+      &-left {
+        flex: 2 1;
+        min-width: 400px;
+        margin: 10px;
+        position: relative;
+      }
+      &-right {
+        position: relative;
+        flex: 1 1;
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        .btn {
+          min-width: 299px;
+          // background: #525656 ;
+          // border-color: #525656;
+        }
+      }
+    }
+  }
+  .wrap-projects {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 140px 0 15px 0;
+    .project-item {
+      position: relative;
+      width: 300px;
+      height: 480px;
+      margin: 10px;
+      cursor: pointer;
+      &:hover {
+        .project-item-img img {
+          filter: grayscale(0);
+        }
+        .project-item-img {
+          &:before {
+            content: '';
+            position: absolute;
+            height: 230px;
+            width: 200px;
+            transform: rotate(45deg);
+            background-color: #82bac3e0;
+            z-index: 1;
+            left: -89px;
+            top: -117px;
+            opacity: 1;
+          }
+          &:after {
+            content: 'Подробнее >';
+            position: absolute;
+            color: #ffffffad;
+            top: 49px;
+            z-index: 1;
+            left: 20px;
+            transform: rotate(-45deg);
+            opacity: 1;
+          }
+        }
+      }
+      &:first-child {
+        &:before {
+          content: 'проекты';
+          position: absolute;
+          font-family: "BebasNeue", sans-serif;
+          font-size: 32px;
+          font-weight: 400;
+          line-height: 1.3;
+          color: #585858;
+          margin: 0 0 25px 0;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          top: -60px;
+        }
+        &:after {
+          content: 'НОВЫЕ И ПОПУЛЯРНЫЕ';
+          position: absolute;
+          transform: rotate(-90deg);
+          top: 102px;
+          left: -220px;
+          font-family: "BebasNeue", sans-serif;
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 1.3;
+          color: #58585887;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+      &-img {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        &:before {
+          content: '';
+          position: absolute;
+          height: 230px;
+          width: 200px;
+          transform: rotate(45deg);
+          background-color: #82bac3e0;
+          z-index: 1;
+          left: -200px;
+          top: -200px;
+          opacity: 0;
+          transition: ease-in-out .5s;
+        }
+        &:after {
+          content: 'Подробнее \e800';
+          position: absolute;
+          color: #ffffffad;
+          top: -200px;
+          z-index: 1;
+          left: 200px;
+          transform: rotate(-45deg);
+          opacity: 0;
+          transition: ease-in-out .5s;
+        }
+        img {
+          height: 100%;
+          filter: grayscale(1);
+          transition: ease-in-out .5s;
+        }
+      }
+      &-describe {
+        padding: 30px;
+        max-height: 180px;
+        display: flex;
+        flex-direction: column;
+        border: 1.5px solid gray;
+        border-top: 0;
+        background-color: white;
+        p {
+          margin: 1px;
+        }
+        &-head {
+          flex: 1;
+          .head-header {
+            font-size: 24px;
+            font-family: "BebasNeue", sans-serif;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #585858;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            // padding: 0;
+          }
+          .head-subheader {
+            font-size: 13px;
+          }
+        }
+        &-foot {
+          flex: 1;
+          display: flex;
+          padding-top: 35px;
+          &-left {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            img {
+              height: 16px;
+              padding-right: 10px;
+              margin: 1px;
+            }
+            p {
+              padding-right: 20px;
+              &:last-child {
+                padding-right: 0px;
+                font-size: 12px;
+              }
+            }
+          }
+          &-right {
+            font-family: "BebasNeue", sans-serif;
+            flex: 1;
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+.slogan-line-3 {
+  // background-image: url('../../img/photo-1471107555852-6e971d283995.jpg');
+  background-image: url('../../img/sloy6.jpg');
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.slogan-3{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 25px 50px 25px;
+  // justify-content: space-between;
+  color: #ffffff;
+
+
+  @media (max-width: $tablet) {
+    text-align: center;
+  }
+
+  .h1{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    p {
+      margin: 0 40px 0 0;
+    }
+  }
+  &-caption{
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
 .why{
   height: 465px;
