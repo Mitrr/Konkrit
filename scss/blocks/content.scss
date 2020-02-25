@@ -213,20 +213,40 @@
 }
 .slogan-line-2 {
   // background-image: url('../../img/photo-1471107555852-6e971d283995.jpg');
-  background-image: url('../../img/sloy4.jpg');
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  .container {
+    background-image: url('../../img/sloy4.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }
 .slogan-2{
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 50px 25px 50px 25px;
+  padding: 50px 30px 50px 80px;
   // justify-content: space-between;
   color: #ffffff;
-
+  &:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -25px;
+    height: 4px;
+    width: 50px;
+    background-color: #82bac3e0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: -50px;
+    height: 4px;
+    width: 50px;
+    background-color: #82bac3e0;
+    transform: rotate(90deg);
+  }
 
   @media (max-width: $tablet) {
     text-align: center;
@@ -260,7 +280,7 @@
         left: -270px;
         position: absolute;
         filter: grayscale(0.9);
-        transition: ease .4s;
+        transition: ease-in-out .5s;
         &:hover {
           filter: none;
         }
@@ -284,6 +304,12 @@
   .about-blue-line {
     position: relative;
     background-color: #82bac38c;
+    // display: flex;
+    // justify-content: flex-end;
+    // .container {
+    //   background-color: #82bac38c;
+    //   margin: 0;
+    // }
     
   }
   &-about {

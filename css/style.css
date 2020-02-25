@@ -3628,7 +3628,7 @@ Responsive Helpers
           transform: rotate(90deg);
 }
 
-.slogan-line-2 {
+.slogan-line-2 .container {
   background-image: url("../../img/sloy4.jpg");
   position: relative;
   background-repeat: no-repeat;
@@ -3647,8 +3647,31 @@ Responsive Helpers
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 50px 25px 50px 25px;
+  padding: 50px 30px 50px 80px;
   color: #ffffff;
+}
+
+.slogan-2:before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -25px;
+  height: 4px;
+  width: 50px;
+  background-color: #82bac3e0;
+}
+
+.slogan-2:after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: -50px;
+  height: 4px;
+  width: 50px;
+  background-color: #82bac3e0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media (max-width: 1070px) {
@@ -3689,9 +3712,9 @@ Responsive Helpers
   position: absolute;
   -webkit-filter: grayscale(0.9);
           filter: grayscale(0.9);
-  -webkit-transition: ease .4s;
-  -o-transition: ease .4s;
-  transition: ease .4s;
+  -webkit-transition: ease-in-out .5s;
+  -o-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
 }
 
 .doma-examples .doma-item img:hover {
