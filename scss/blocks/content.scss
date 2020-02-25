@@ -67,22 +67,22 @@
       width: 60%;
     }
 
-    &:before{
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 5px;
-      background: $color2;
-      @include position(absolute, null null 20px -55px);
-      display: block;
-      @media (max-width: $tablet) {
-        display: none;
-      }
-    }
+    // &:before{
+    //   content: '';
+    //   width: 5px;
+    //   height: 5px;
+    //   border-radius: 5px;
+    //   background: $color2;
+    //   @include position(absolute, null null 20px -55px);
+    //   display: block;
+    //   @media (max-width: $tablet) {
+    //     display: none;
+    //   }
+    // }
 
-    &:first-child:before{
-      display: none;
-    }
+    // &:first-child:before{
+    //   display: none;
+    // }
 
     .icon{
       font-size: 20px;
@@ -933,7 +933,20 @@
     line-height: 0.9;
     color: #82bac3;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    text-transform: uppercase;  
+    position: relative;
+    &::after {
+      content: '';
+      background: url('/img/arrobl.png') no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: 40px;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      right: -90px;
+      // transform: rotate(90deg);
+    }
     }
   }
   .gallery-wrapper {

@@ -6871,9 +6871,9 @@ Responsive Helpers
   top: 200px;
   left: 0;
   right: 0;
-  background-image: url("../../img/HF_K83WnCT4.jpg");
+  background-image: url(/img/architecture44.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 166%;
+  background-size: 100% 97%;
   height: 553px;
   position: absolute;
 }
@@ -6969,6 +6969,24 @@ Responsive Helpers
           flex: 1;
   color: #696565;
   font-size: 60px;
+}
+
+.header .container .header-offer-main .header-offer-left .header-offer-img .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+
+.header .container .header-offer-main .header-offer-left .header-offer-img .footer-social img {
+  width: 25px;
+  margin: 0 20px 0 0;
+}
+
+.header .container .header-offer-main .header-offer-left .header-offer-img p {
+  color: #3a3636;
+  letter-spacing: 1px;
+  margin: 30px 0;
 }
 
 .header .container .header-offer-main .header-offer-right .header-offer-text {
@@ -8142,28 +8160,6 @@ Responsive Helpers
   }
 }
 
-.worktype-item:before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 5px;
-  background: #82bac3;
-  position: absolute;
-  bottom: 20px;
-  left: -55px;
-  display: block;
-}
-
-@media (max-width: 1070px) {
-  .worktype-item:before {
-    display: none;
-  }
-}
-
-.worktype-item:first-child:before {
-  display: none;
-}
-
 .worktype-item .icon {
   font-size: 20px;
   color: #999999;
@@ -9287,6 +9283,19 @@ Responsive Helpers
   color: #82bac3;
   letter-spacing: 2px;
   text-transform: uppercase;
+  position: relative;
+}
+
+.gallery .container span::after {
+  content: '';
+  background: url("/img/arrobl.png") no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 40px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: -90px;
 }
 
 .gallery .gallery-wrapper {

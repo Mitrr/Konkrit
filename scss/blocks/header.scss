@@ -5,11 +5,12 @@
     top: 200px;
     left: 0;
     right: 0;
-    background-image: url(../../img/HF_K83WnCT4.jpg);
+    background-image: url(/img/architecture44.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 166%;
+    background-size: 100% 97%;
     height: 553px;
     position: absolute;
+    // filter: brightness(1.2);
   }
 }
 
@@ -71,6 +72,22 @@
           font-size: 60px;
         }
       }
+      .header-offer-img {
+        .footer-social {
+          display: flex;
+          margin: 20px 0;
+          img {
+            width: 25px;
+            margin: 0 20px 0 0;
+          }
+        }
+        p {
+          color: #3a3636;
+          letter-spacing: 1px;
+          margin: 30px 0;
+        }
+      }
+      
     }
     .header-offer-right {
       .header-offer-text {
