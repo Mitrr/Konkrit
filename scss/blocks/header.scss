@@ -51,6 +51,14 @@
           .social-phone {
             display: flex;
             flex-direction: column;
+            a {
+              color: #000000;
+              font-weight: 300;
+              transition: ease-out .5s;
+              &:hover {
+                color: rgba(74, 185, 202, 0.877);
+              }
+            }
           }
           .social-adress {
             display: flex;
@@ -59,6 +67,8 @@
         }
         h1 {
           flex: 1 ;
+          color: #696565;
+          font-size: 60px;
         }
       }
     }
