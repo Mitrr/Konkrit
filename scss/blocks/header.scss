@@ -28,9 +28,9 @@
   //   position: absolute;
   // }
 
-  @media (max-width: $tablet) {
-    height: 634px;
-  }
+  // @media (max-width: $tablet) {
+  //   height: 634px;
+  // }
   .container .header-offer-main {
     display: flex;
     .header-offer-left, .header-offer-right {
@@ -103,16 +103,16 @@
       top:0;
       z-index: 50;
       width: 100%;
-      padding: 0 10%;
+      padding: 0 2%;
       left: 0;
       transition: all 0.3s;
       height: 66px;
       box-shadow: 0 0 10px $color5;
       @media (max-width: $screen) {
-        padding: 0 5%;
+        padding: 0 1%;
       }
       @media (max-width: $tablet) {
-        padding: 0 2%;
+        padding: 0 1%;
       }
 
       .header-menu{
