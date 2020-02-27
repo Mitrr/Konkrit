@@ -129,3 +129,166 @@
         }
     }
 }
+
+.services-home {
+    .slogan-line-2 {
+        .slogan-2 {
+            &::before {
+                content: none;
+            }
+            &::after {
+                content: none;
+            }
+        }
+    }
+    .about-blue-line {
+        .container {
+            
+            .doma-wrap {
+                display: flex;
+                align-items: center;
+                padding: 60px 0 60px 80px;
+                flex-wrap: wrap;
+                .doma-about {
+                    flex: 2;
+                    display: flex;
+                    min-width: 200px;
+                    h1 {
+                        margin: 0;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        left: -80px;
+                        height: 4px;
+                        width: 50px;
+                        background-color: #82bac3e0;
+                      }
+                      &:after {
+                        content: '';
+                        position: absolute;
+                        top: 13px;
+                        left: -103px;
+                        height: 4px;
+                        width: 50px;
+                        background-color: #82bac3e0;
+                        transform: rotate(90deg);
+                      }
+                }
+                .doma-arrow-down {
+                    position: relative;
+                    flex: 1;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 18px;
+                        height: 4px;
+                        width: 50px;
+                        background-color: #585858ad;
+                        transform: rotate(-40deg);
+                      }
+                      &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -18px;
+                        height: 4px;
+                        width: 50px;
+                        background-color: #585858ad;
+                        transform: rotate(40deg);
+                      }
+                }
+                .doma-text {
+                    flex: 4;
+                    min-width: 270px;
+                }
+            }
+        }
+        
+    }
+}
+
+.services-options {
+    position: relative;
+    .service {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &-line {
+            flex: 1;
+            display: flex;
+            border-bottom: 1px solid #00000046;
+            
+            &-block {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                &:nth-child(-n+3) {
+                    justify-content: space-between;
+                }
+
+                img {
+                    margin: 40px 0 10px 0;
+                }
+                h2 {
+                    font-size: 24px;
+                    color: #000000;
+                    margin: 15px 0 15px 0;
+                }
+                h3 {
+                    margin: 0 0 10px 0;
+                    color: #0000008c;
+                }
+                p {
+                    line-height: 1.5;
+                    margin: 0 10px 10px 0;
+                    max-width: 350px;
+                }
+                div:last-child {
+                    margin: 20px 0 40px 0;
+                }
+                li {
+                    position: relative;
+                    color: #000000;
+                    display: flex;
+                    padding: 0;
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                        // &:hover {
+                        //     color: #82bac3;
+                        //     text-decoration: underline;
+                        //     li {
+                        //         color: #82bac3;
+                        //     }
+                        // }
+                    }
+                    &::before {
+                        content: none;
+                    }
+                    &::after {
+                        content: '\e800';
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 30px;
+                        position: relative;
+                        top: 2px;
+                        font-size: 12px;
+                        font-family: fontello;
+                    }
+                    & a:hover {
+                        color: #82bac3;
+                        text-decoration: underline;
+                         li {
+                            color: #82bac3;
+                            
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

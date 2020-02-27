@@ -6809,4 +6809,208 @@ Responsive Helpers
           align-items: center;
 }
 
+.services-home .slogan-line-2 .slogan-2::before {
+  content: none;
+}
+
+.services-home .slogan-line-2 .slogan-2::after {
+  content: none;
+}
+
+.services-home .about-blue-line .container .doma-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 0 60px 80px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-about {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 200px;
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-about h1 {
+  margin: 0;
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-about:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -80px;
+  height: 4px;
+  width: 50px;
+  background-color: #82bac3e0;
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-about:after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: -103px;
+  height: 4px;
+  width: 50px;
+  background-color: #82bac3e0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-arrow-down {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-arrow-down:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 4px;
+  width: 50px;
+  background-color: #585858ad;
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-arrow-down:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -18px;
+  height: 4px;
+  width: 50px;
+  background-color: #585858ad;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.services-home .about-blue-line .container .doma-wrap .doma-text {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  min-width: 270px;
+}
+
+.services-options {
+  position: relative;
+}
+
+.services-options .service {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-options .service-line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #00000046;
+}
+
+.services-options .service-line-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-options .service-line-block:nth-child(-n+3) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services-options .service-line-block img {
+  margin: 40px 0 10px 0;
+}
+
+.services-options .service-line-block h2 {
+  font-size: 24px;
+  color: #000000;
+  margin: 15px 0 15px 0;
+}
+
+.services-options .service-line-block h3 {
+  margin: 0 0 10px 0;
+  color: #0000008c;
+}
+
+.services-options .service-line-block p {
+  line-height: 1.5;
+  margin: 0 10px 10px 0;
+  max-width: 350px;
+}
+
+.services-options .service-line-block div:last-child {
+  margin: 20px 0 40px 0;
+}
+
+.services-options .service-line-block li {
+  position: relative;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.services-options .service-line-block li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.services-options .service-line-block li::before {
+  content: none;
+}
+
+.services-options .service-line-block li::after {
+  content: '\e800';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+  font-family: fontello;
+}
+
+.services-options .service-line-block li a:hover {
+  color: #82bac3;
+  text-decoration: underline;
+}
+
+.services-options .service-line-block li a:hover li {
+  color: #82bac3;
+}
+
 /*# sourceMappingURL=style.css.map */
