@@ -55,10 +55,18 @@
                             &:hover {
                               color: rgba(74, 185, 202, 0.877);
                             }
+                            span {
+                                font-size: 12px;
+                                line-height: 14px;
+                            }
                           }
                     }
                     .social-adress {
                         margin: 0 10px;
+                        p {
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
                     }
                 }
                 

@@ -23,7 +23,7 @@ Buttons
     min-width: 196px;
     color: $color1 !important;
     -webkit-appearance: none;
-    background: $color2 !important;
+    background: $color2 ;
     user-select: none;
     backface-visibility: hidden;
     @include box-sizing(border-box);
@@ -139,11 +139,12 @@ Buttons
 
 
     &--white {
-        background: transparent !important;
-        color: $color0 !important;
+        background: $color1 !important;
+        color: $color6 !important;
+        border-color: &color1 !important;
 
         &:hover,&:active,&:focus,.touched {
-            background: transparent !important;
+            background: $color1  !important;
         }
     }
 

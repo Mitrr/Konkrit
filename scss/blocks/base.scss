@@ -98,7 +98,35 @@ body {
 * Skeleton elements
 *
 */
-
+.span-nav {
+  font-size: 16px;
+  padding-top: 50px;
+  // padding-bottom: 100px;
+  a {
+    text-decoration: none;
+    color: $color5;
+    transition: ease-in-out .5s;
+    &::after {
+      content: '\e800';
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 14px;
+      position: relative;
+      top: 0px;
+      font-size: 12px;
+      font-family: fontello;
+      transition: ease-in-out .5s;
+  }
+  &:hover {
+      color: #82bac3;
+      text-decoration: underline;
+      &::after {
+        margin-left: 19px;
+      }
+  }
+  }
+  
+}
 
 .scrollable {
   overflow-y: auto;
