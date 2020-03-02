@@ -5,6 +5,11 @@
     .container {
         display: flex;
     }
+    .header {
+        &.fixed {
+            padding-top: 61px;
+        }
+    }
     &-left {
         flex: 1;
         display: flex;
@@ -29,10 +34,14 @@
                 align-items: center;
                 .footer-social {
                     display: flex;
-                    // margin: 20px 0;
-                    img {
-                      width: 20px;
-                      margin: 0 18px 0 0;
+                    margin: 20px 0;
+                    a {
+                      font-size: 24px;
+                      color: $color5;
+                      margin: 0 20px 0 0;
+                      &:hover {
+                        color: #82bac3;
+                      }
                     }
                   }
             }
