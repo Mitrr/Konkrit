@@ -12,7 +12,7 @@ $color7: #323232;
 
 $ts: 0.3s;
 
-@include font-face("BebasNeue", '../font/BebasNeueBold', 600, normal, $file-formats: eot woff svg);
+@include font-face("BebasNeueBold", '../font/BebasNeueBold', 600, normal, $file-formats: eot woff svg);
 @include font-face("BebasNeue", '../font/BebasNeueRegular', 400, normal, $file-formats: eot woff svg);
 
 
@@ -30,6 +30,7 @@ $ts: 0.3s;
 
 $font1: 'Roboto', sans-serif;
 $font2: 'BebasNeue', sans-serif;
+$font3: 'BebasNeueBold', sans-serif;
 
 
 $screen_large: 1440px;

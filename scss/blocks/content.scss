@@ -724,25 +724,17 @@
         }
         .project-item-img {
           &:before {
-            content: '';
-            position: absolute;
-            height: 230px;
-            width: 200px;
-            transform: rotate(45deg);
-            background-color: #82bac3e0;
-            z-index: 1;
-            left: -89px;
-            top: -117px;
+            // left: -89px;
+            // top: -117px;
             opacity: 1;
+            transform: rotate(45deg) translateX(-150px);
           }
           &:after {
-            content: 'Подробнее >';
-            position: absolute;
-            color: #ffffffad;
-            top: 49px;
-            z-index: 1;
-            left: 20px;
-            transform: rotate(-45deg);
+            // top: 49px;
+            // left: 20px;
+            // transform: translate(20px, 49px);
+            // transform: rotate(-45deg) translate(20px, 49px);
+            transform: rotate(-45deg) translate(-20px, 40px);
             opacity: 1;
           }
         }
@@ -757,22 +749,24 @@
           position: absolute;
           height: 230px;
           width: 200px;
-          transform: rotate(45deg);
+          transform: rotate(45deg) translateX(-200px);
+          // transform: rotate(45deg);
           background-color: #82bac3e0;
           z-index: 1;
-          left: -200px;
-          top: -200px;
+          // left: -200px;
+          // top: -200px;
           opacity: 0;
           transition: ease-in-out .5s;
         }
         &:after {
-          content: 'Подробнее \e800';
+          content: 'Подробнее > ';
           position: absolute;
           color: #ffffffad;
-          top: -200px;
+          // top: -200px;
           z-index: 1;
-          left: 200px;
-          transform: rotate(-45deg);
+          // left: 200px;
+          // transform: rotate(-45deg);
+          transform: rotate(-45deg) translate(40px, 40px);
           opacity: 0;
           transition: ease-in-out .5s;
         }
