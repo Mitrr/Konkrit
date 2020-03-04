@@ -217,6 +217,9 @@ body {
   width: 100%;
   min-width: 300px;
   position: relative;
+  @media(max-width:1260px) {
+    padding: 0 10px;
+  }
 
   @media (max-width: $screen_large) {
 

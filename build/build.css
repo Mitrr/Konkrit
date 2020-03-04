@@ -6788,6 +6788,12 @@ body {
   position: relative;
 }
 
+@media (max-width: 1260px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 .wrap {
   position: relative;
   width: 100%;
@@ -12567,6 +12573,7 @@ Responsive Helpers
 
 .project-home-header .filter-wrap-content li {
   padding: 0 25px 0 0;
+  min-width: 100px;
 }
 
 .project-home-header .filter-wrap-content h3 {
@@ -12698,7 +12705,6 @@ Responsive Helpers
 }
 
 .project-home-content .projects .wrap-projects {
-  grid-template-columns: 300px 300px 300px 300px;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -12712,6 +12718,28 @@ Responsive Helpers
 
 .project-home-content .projects .wrap-projects::after {
   content: none;
+}
+
+@media (min-width: 650px) {
+  .project-home-content .projects .wrap-projects {
+    grid-template-columns: 300px 300px;
+  }
+}
+
+@media (min-width: 920px) {
+  .project-home-content .projects .wrap-projects {
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+@media (min-width: 1300px) {
+  .project-home-content .projects .wrap-projects {
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+    grid-auto-rows: minmax(100px, auto);
+  }
 }
 
 .project-home-content .container a {

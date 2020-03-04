@@ -874,8 +874,12 @@
 .project-home-header {
     .filter-wrap-content {
         margin-bottom: 15px;
+        // ul {
+        //     flex-wrap: wrap;
+        // }
         li {
             padding: 0 25px 0 0;
+            min-width: 100px;
         }
         h3 {
             font-family: "BebasNeueBold", sans-serif;
@@ -984,7 +988,7 @@
         flex-direction: column;
         align-items: center;
         .wrap-projects {
-            grid-template-columns: 300px 300px 300px 300px;
+            
             max-width: fit-content;
             margin: 0;
             grid-gap: 20px;
@@ -993,6 +997,19 @@
             }
             &::after {
                 content: none; 
+            }
+            @media (min-width: 650px) {
+                grid-template-columns: 300px 300px;
+              }
+            @media (min-width: 920px) {
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+            grid-auto-rows: minmax(100px, auto);
+            }
+            @media (min-width: 1300px) {
+            grid-template-columns: 300px 300px 300px 300px;
+            grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+            grid-auto-rows: minmax(100px, auto);
             }
         }
     }
