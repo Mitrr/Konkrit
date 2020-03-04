@@ -1,0 +1,519 @@
+{% extends "./includes/layout-about.twig" %}
+
+{% block content %}
+<section class="header-about">
+    <div class="container">
+        <div class="header-about-h1">
+            <h1>Проекты домов</h1>
+        </div>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a class="breadcrumbs-link" href="">Главная</a></li>
+                <li><a class="breadcrumbs-link" href="">Проекты</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="project-home-header">
+    <div class="gallery-filter">
+        <div class="container">
+            <div class="filter-wrap">
+                <div class="filter-wrap-header">
+                    <h2>подбор проектов по параметрам</h2>
+                    {# <div class="filter-close"></div> #}
+                </div>
+                <form action="">
+                    <div class="filter-wrap-content">
+                        <ul style="display: flex;">
+                            <li>
+                                <ul>
+                                    <li><h3>цена:</h3></li>
+                                    <li class="input-text-block">
+                                        <div class="input-ruble"><input type="text" id="input-text-1" value="40 000" onchange="updateRange(this)"><p class="ruble">&#8381</p></div>
+                                        <div class="input-ruble"><input type="text" id="input-text-2" value="19 000 000" onchange="updateRange(this)"><p class="ruble">&#8381</p></div>
+                                    </li>
+                                    <li class="input-range" style="margin: 30px 0;">
+                                        <input class="input-range-1" onchange="updateTextInput(this)" type="range" multiple min="0" step="1" max="50000000" value="40000">
+                                        <input class="input-range-2" onchange="updateTextInput(this)" type="range" multiple min="0" step="1" max="50000000" value="19000000">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h3>площадь:</h3></li>
+                                    <li class="input-text-block">
+                                        <div class="input-ruble"><input type="text" id="input-text-3" value="10" onchange="updateRange(this)"><p class="ruble">M<sup>2</sup></p></div>
+                                        <div class="input-ruble"><input type="text" id="input-text-4" value="645" onchange="updateRange(this)"><p class="ruble">M<sup>2</sup></p></div>
+                                    </li>
+                                    <li class="input-range" style="margin: 30px 0;">
+                                        <input class="input-range-3" onchange="updateTextInput(this)" type="range" multiple min="0" step="1" max="1000" value="10">
+                                        <input class="input-range-4" onchange="updateTextInput(this)" type="range" multiple min="0" step="1" max="1000" value="645">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h3>назначение:</h3></li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Зимний
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Дачный
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Коттеджный
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Гостевой
+                                          </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h3>конструкция:</h3></li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Каркасный
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Домокомплект
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            На сваях
+                                          </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h3>этажность:</h3></li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            1
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            2
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            3
+                                          </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><h3>материал:</h3></li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Камень
+                                          </label>
+                                    </li>
+                                    <li class="checkbox-blue">
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" class="checkbox-button__input" id="choice1-1" name="choice1">
+                                            <span class="checkbox-button__control"></span>
+                                            Дерево
+                                          </label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                
+                <div class="filter-wrap-footer">
+                    <div class="filter-wrap-footer-btns">
+                        <div class="btn btn--black btn--wide">Отфильтровать</div>
+                        <div class="btn btn--white btn--wide">Сбросить фильтр</div>
+                    </div>
+                    <div class="choice-proj">
+                        <p>Выбрано проектов - <span>150</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project-home-content">
+    <div class="container">
+        <div class="projects-header">
+            <p>В галерее представлены все реализованные проекты, типовые разработки, фотографии с места строительства и другое.</p>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="wrap-projects">
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom4.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom1.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom2.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom3.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom5.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom6.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom4.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom1.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom2.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom3.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom5.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom6.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+          <div class="container">
+              <div class="pagination">
+                  <div class="pagination-left">
+                    <ul>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <a href=""><li class="icon-right-open-big"></li></a>
+                    </ul>
+                  </div>
+                  <div class="pagination-right">
+                    <p>Всего страниц - 6</p>
+                  </div>
+              </div>
+          </div>
+    </div>
+</section>
+<section class="projects-home-describe">
+    <div class="container">
+        <div class="home-describe-text">
+            <p>
+                Стильный уютный дом с мансардным этажом, балконом и открытой верандой для круглогодичного комфортного проживания всей семьей. 
+                На первом этаже просторная гостиная, с кухней-столовой, две спальни, гардеробная, санузел и входная группа.
+                На втором этаже холл, из которого проходим в три спальни и дополнительный санузел. Котельная предусмотрена в цокольном этаже.
+            </p>
+            <p>
+                Стильный уютный дом с мансардным этажом, балконом и открытой верандой для круглогодичного комфортного проживания всей семьей. 
+                На первом этаже просторная гостиная, с кухней-столовой, две спальни, гардеробная, санузел и входная группа.
+                На втором этаже холл, из которого проходим в три спальни и дополнительный санузел. Котельная предусмотрена в цокольном этаже.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

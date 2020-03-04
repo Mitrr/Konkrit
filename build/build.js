@@ -1788,4 +1788,8 @@ function bind_widgets() {
     //ui_slider_init();
 }
 
+// projects inputs
+
+let updateTextInput = val => document.getElementById(`input-text-${val.className.substr(-1)}`).value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
+let updateRange = val => document.getElementsByClassName(`input-range-${val.id.substr(-1)}`)[0].value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
 //# sourceMappingURL=build.js.map

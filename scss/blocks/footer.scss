@@ -96,21 +96,30 @@
           color: #e7e5e5;
           width: 100%;
           text-align: left;
+          span {
+            color: #82bac3;
+          }
         }
         .textfield {
           background: rgba(163, 162, 162, 0);
           height: 40px;
           border: 1px solid;
         }
-        .checkbox {
+        .checkbox-blue {
           color: #fcfbfb;
-          .checkbox__icon {
-            border-color: #fcfbfb;
-            &:before {
-              // content: '&bull';
+          .checkbox-button__input:checked + .checkbox-button__control {
+            border-color: white;
             }
-            
+          .checkbox-button__control {
+            width: 17px;
+            height: 17px;
+            border: 2px solid white;
+            border-radius: 50%;
+            &::after {
+              border-radius: 50%;
+            }
           }
+
           input {
             color: #fcfbfb;
           }
