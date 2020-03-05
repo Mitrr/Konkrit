@@ -8248,6 +8248,7 @@ Responsive Helpers
 }
 
 .slogan .h1 {
+  font-family: "BebasNeueBold", sans-serif;
   color: #ffffff;
   margin-bottom: 0px;
 }
@@ -8529,6 +8530,7 @@ Responsive Helpers
 }
 
 .slogan-2 .h1 {
+  font-family: "BebasNeueBold", sans-serif;
   color: #ffffff;
   margin-bottom: 0px;
 }
@@ -8677,6 +8679,7 @@ Responsive Helpers
 
 .blog-news .blog-wrap .blog-item:first-child {
   border-right: 1px solid #00000036;
+  padding: 0;
 }
 
 .blog-news .blog-wrap .blog-item p {
@@ -9099,7 +9102,7 @@ Responsive Helpers
 .projects .wrap-projects:before {
   content: 'проекты';
   position: absolute;
-  font-family: "BebasNeue", sans-serif;
+  font-family: "BebasNeueBold", sans-serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 1.3;
@@ -9117,12 +9120,13 @@ Responsive Helpers
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
   top: 102px;
-  left: -220px;
-  font-family: "BebasNeue", sans-serif;
+  left: -230px;
+  font-family: "BebasNeueBold", sans-serif;
   font-size: 48px;
   font-weight: 400;
   line-height: 1.3;
-  color: #58585836;
+  color: #838383;
+  opacity: 0.3;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -9347,6 +9351,7 @@ Responsive Helpers
 }
 
 .slogan-3 .h1 p {
+  font-family: "BebasNeueBold", sans-serif;
   margin: 0 60px 0 0;
   font-size: 60px;
 }
@@ -9624,7 +9629,7 @@ Responsive Helpers
 }
 
 .gallery .container span {
-  font-family: "BebasNeue", sans-serif;
+  font-family: "BebasNeueBold", sans-serif;
   font-size: 60px;
   font-weight: 500;
   line-height: 0.9;
@@ -9777,6 +9782,7 @@ Responsive Helpers
 }
 
 .partners-wrapper-right-text h2 {
+  font-family: "BebasNeueBold", sans-serif;
   margin: 0;
 }
 
@@ -11497,12 +11503,14 @@ Responsive Helpers
 }
 
 .header-about-main .about-main-left-item h2 {
+  font-family: "BebasNeueBold", sans-serif;
   font-size: 48px;
   color: #89bec6;
   margin: 40px 0 15px 0;
 }
 
 .header-about-main .about-main-left-item h3 {
+  font-family: "BebasNeueBold", sans-serif;
   margin: 0 0 10px 0;
   color: #0000008c;
 }
@@ -11520,10 +11528,6 @@ Responsive Helpers
           flex: 1;
   background: url("/img/sloy8.jpg") no-repeat;
   background-size: cover;
-}
-
-.slogan-about .container {
-  padding: 0 10px;
 }
 
 .slogan-about .slogan {
@@ -11723,6 +11727,7 @@ Responsive Helpers
 
 .services-options .service-line-block img {
   width: 43px;
+  height: 43px;
 }
 
 .services-options .service-line-block h2 {
@@ -12899,11 +12904,21 @@ Responsive Helpers
 
 .blog-content-main {
   background-color: #f1f4f4;
-  padding: 15px 0;
+}
+
+.blog-content-main .blog-content-header:first-child .blog-content-header-wrap {
+  padding-top: 55px;
+}
+
+.blog-content-main .blog-content-header:last-child .blog-content-header-wrap {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .blog-content-main .blog-content-header-wrap {
-  margin: 40px 0 55px 0;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 0 0 55px 0;
 }
 
 .blog-content-main .blog-content-header-wrap-left {
