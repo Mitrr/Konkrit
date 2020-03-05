@@ -153,6 +153,9 @@
             &:before {
                 content: none;
             }
+            &:after {
+                content: none;
+            }
             .doma-wrap {
                 display: flex;
                 align-items: center;
@@ -162,7 +165,9 @@
                     flex: 2;
                     display: flex;
                     min-width: 200px;
+                    padding: 0;
                     h1 {
+                        font-family: "BebasNeueBold", sans-serif;
                         margin: 0;
                     }
                     &:before {
@@ -170,17 +175,17 @@
                         position: absolute;
                         top: -10px;
                         left: -80px;
-                        height: 4px;
-                        width: 50px;
+                        height: 5px;
+                        width: 57px;
                         background-color: #82bac3e0;
                       }
                       &:after {
                         content: '';
                         position: absolute;
-                        top: 13px;
-                        left: -103px;
-                        height: 4px;
-                        width: 50px;
+                        top: 18px;
+                        left: -107px;
+                        height: 5px;
+                        width: 57px;
                         background-color: #82bac3e0;
                         transform: rotate(90deg);
                       }
@@ -224,6 +229,7 @@
 
 .services-options {
     position: relative;
+    background-color: #f1f4f4;
     .service {
         position: relative;
         display: flex;
@@ -231,6 +237,7 @@
         &-line {
             flex: 1;
             display: flex;
+            flex-wrap: wrap;
             border-bottom: 1px solid #00000046;
             &:last-child {
                 border: none;
@@ -241,13 +248,17 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-
-                img {
+                min-width: 320px;
+                div:first-child {
                     margin: 40px 0 10px 0;
                 }
+                img {
+                    width: 43px;
+                }
                 h2 {
+                    font-family: "BebasNeueBold", sans-serif;
                     font-size: 24px;
-                    color: #000000;
+                    color: #585858;
                     margin: 15px 0 15px 0;
                 }
                 h3 {

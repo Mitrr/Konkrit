@@ -11569,6 +11569,10 @@ Responsive Helpers
   content: none;
 }
 
+.services-home .about-blue-line .container:after {
+  content: none;
+}
+
 .services-home .about-blue-line .container .doma-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11589,9 +11593,11 @@ Responsive Helpers
   display: -ms-flexbox;
   display: flex;
   min-width: 200px;
+  padding: 0;
 }
 
 .services-home .about-blue-line .container .doma-wrap .doma-about h1 {
+  font-family: "BebasNeueBold", sans-serif;
   margin: 0;
 }
 
@@ -11600,18 +11606,18 @@ Responsive Helpers
   position: absolute;
   top: -10px;
   left: -80px;
-  height: 4px;
-  width: 50px;
+  height: 5px;
+  width: 57px;
   background-color: #82bac3e0;
 }
 
 .services-home .about-blue-line .container .doma-wrap .doma-about:after {
   content: '';
   position: absolute;
-  top: 13px;
-  left: -103px;
-  height: 4px;
-  width: 50px;
+  top: 18px;
+  left: -107px;
+  height: 5px;
+  width: 57px;
   background-color: #82bac3e0;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -11664,6 +11670,7 @@ Responsive Helpers
 
 .services-options {
   position: relative;
+  background-color: #f1f4f4;
 }
 
 .services-options .service {
@@ -11684,6 +11691,8 @@ Responsive Helpers
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-bottom: 1px solid #00000046;
 }
 
@@ -11705,15 +11714,21 @@ Responsive Helpers
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  min-width: 320px;
 }
 
-.services-options .service-line-block img {
+.services-options .service-line-block div:first-child {
   margin: 40px 0 10px 0;
 }
 
+.services-options .service-line-block img {
+  width: 43px;
+}
+
 .services-options .service-line-block h2 {
+  font-family: "BebasNeueBold", sans-serif;
   font-size: 24px;
-  color: #000000;
+  color: #585858;
   margin: 15px 0 15px 0;
 }
 
