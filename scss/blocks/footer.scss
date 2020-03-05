@@ -88,6 +88,7 @@
         margin: 50px;
         height: 100%;
         .form--title {
+          font-family: "BebasNeueBold", sans-serif;
           font-size: 60px;
           color: #82bac3;
           margin: 0;
@@ -163,6 +164,10 @@
       .social-phone {
         display: flex;
         flex-direction: column;
+        line-height: 18px;
+        a:hover {
+          color: #82bac3;
+        }
       }
       .wader {
         color: gray;

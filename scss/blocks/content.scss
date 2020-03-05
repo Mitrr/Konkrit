@@ -323,6 +323,16 @@
         left: -100vw;
         background-color: #f1f4f4;
       }
+      &:after {
+        content: '168';
+        font-family: "BebasNeueBold", sans-serif;
+        position: absolute;
+        left: -90px;
+        top: 50%;
+        font-size: 100px;
+        color: #838383;
+        line-height: 0;
+      }
     }
     // display: flex;
     // justify-content: flex-end;
@@ -708,7 +718,7 @@
       font-size: 48px;
       font-weight: 400;
       line-height: 1.3;
-      color: #58585887;
+      color: #58585836;
       letter-spacing: 2px;
       text-transform: uppercase;
     }

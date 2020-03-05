@@ -1094,10 +1094,21 @@
                     margin-bottom: 40px;
                 }
                 .read-more {
+                    position: relative;
                     font-size: 16px;
                     text-decoration: none;
                     color: #585858;
                     margin-top: 15px;
+                    &::after {
+                        content: '\032C';
+                        position: absolute;
+                        right: -27px;
+                        font-size: 45px;
+                        top: -11px;
+                        line-height: 0;
+                        opacity: 0.5;
+                        font-weight: 100;
+                    }
                 }
             }
         }
@@ -1110,9 +1121,23 @@
                 margin: 40px 0 55px 0;
                 &-left {
                     max-height: 240px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &-right {
+                    .span-nav {
+                        margin: 15px 0 0 0;
+                        font-size: 16px;
+                        color: #585858;
+                        padding: 0;
+                    }
                 }
             }
             
         }
+    }
+    .pagination a {
+        text-decoration: none;
     }
 }
