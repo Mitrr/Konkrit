@@ -11362,7 +11362,10 @@ Responsive Helpers
 }
 
 .header-about .header-about-h1 h1 {
+  font-family: "BebasNeueBold", sans-serif;
+  font-size: 60px;
   margin: 50px 0 0 0;
+  color: #838383;
 }
 
 .header-about .breadcrumbs {
@@ -12481,6 +12484,9 @@ Responsive Helpers
 .gallery-filter .filter-wrap-header h2 {
   font-family: "BebasNeueBold", sans-serif;
   margin: 0 0 50px 0;
+  color: #585858;
+  font-size: 24px;
+  line-height: 2;
 }
 
 .gallery-filter .filter-wrap-header .filter-close {
@@ -12677,18 +12683,18 @@ Responsive Helpers
   pointer-events: all;
 }
 
-.project-home-content {
-  background-color: #f1f4f4;
-}
-
-.project-home-content .projects-header {
+.projects-header {
   background-color: #82bac3;
 }
 
-.project-home-content .projects-header p {
+.projects-header p {
   padding: 19px 40px;
   color: white;
   font-size: 14px;
+}
+
+.project-home-content {
+  background-color: #f1f4f4;
 }
 
 .project-home-content .projects {
@@ -12772,6 +12778,92 @@ Responsive Helpers
   font-size: 14px;
   line-height: 1.7;
   margin: 0 0 40px 0;
+}
+
+.blog-content-header-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 55px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-content-header-wrap-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  max-height: 578px;
+  max-width: 610px;
+  width: 100%;
+}
+
+.blog-content-header-wrap-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 586px;
+  margin-left: 35px;
+}
+
+.blog-content-header-wrap-right h2 {
+  margin: 0 0 10px 0;
+  font-family: "BebasNeueBold", sans-serif;
+  font-size: 24px;
+}
+
+.blog-content-header-wrap-right .subhead {
+  color: #585858;
+}
+
+.blog-content-header-wrap-right p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: black;
+  margin: 0 0 35px 0;
+}
+
+.blog-content-header-wrap-right span {
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.25;
+  margin-bottom: 40px;
+}
+
+.blog-content-header-wrap-right .read-more {
+  font-size: 16px;
+  text-decoration: none;
+  color: #585858;
+  margin-top: 15px;
+}
+
+.blog-content-main {
+  background-color: #f1f4f4;
+  padding: 15px 0;
+}
+
+.blog-content-main .blog-content-header-wrap {
+  margin: 40px 0 55px 0;
+}
+
+.blog-content-main .blog-content-header-wrap-left {
+  max-height: 240px;
 }
 
 /*# sourceMappingURL=style.css.map */
