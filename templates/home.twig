@@ -1,0 +1,635 @@
+{% extends "./includes/layout-about.twig" %}
+
+{% block content %}
+<header class="header home">
+    <div class="container">
+    <div class="header-offer-main">
+        <div class="header-offer-left">
+            <div class="header-offer-text">
+                <h1>Кирпичные дома</h1>
+            </div>
+            <div class="header-offer-img">
+                <h3>услуги по комплексному возведению домов из кирпича</h3>
+            </div>
+        </div>
+        <div class="header-offer-right">
+            <div class="header-offer-img">
+                <img src="/img/sloy16.jpg" alt="">
+            </div>
+            <div class="header-offer-text">
+                <div class="btns">
+                    <a href="" class="btn btn--wide btn--gray">Смотреть проекты</a>
+                    <a href="" class="btn btn--wide btn--brown">Заказать дом</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+<section class="slogan-line home-slogan">
+<section class="container">
+    <div class="slogan">
+        <div class="h1"> Все преимущества кирпичных домов</div>
+        <div class="doma-arrow-down"></div>
+        <div class="slogan-caption">Давайте строить</div>
+    </div>
+</section>
+</section>
+
+<section class="bleu-line home-line">
+    <div class="container">
+        <div class="worktype cols">
+            <div class="worktype-item">
+                <div class="h1-l">20</div>
+                <div class="worktype-item--text">
+                    прочность
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">102</div>
+                <div class="worktype-item--text">
+                    экологичность
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">286</div>
+                <div class="worktype-item--text">
+                    морозоустойчивость
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">564</div>
+                <div class="worktype-item--text">
+                    долговечность
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">564</div>
+                <div class="worktype-item--text">
+                    оптимальная<br>
+                    влажность
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">564</div>
+                <div class="worktype-item--text">
+                    универсальность
+                </div>
+            </div>
+            <div class="worktype-item">
+                <div class="h1-l">564</div>
+                <div class="worktype-item--text">
+                    пожароустойчивость
+                </div>
+            </div>
+        </div>
+        <div class="worktype-foot">
+            <div class="worktype-foot-text">
+                <p>
+                    Преимущества дома из кирпича видны невооруженным взглядом и неоспоримы. 
+                    Все дело в том, что строения из кирпича в подавляющем большинстве случаев значительно превышают 
+                    те возможности эксплуатации, которые были заложены при проектировании здания. 
+                    Прочность и надежность выделяют кирпичные дома среди всех других вариантов строений, 
+                    именно поэтому в настоящее время, когда на рынке появилось большое количество дополнительных 
+                    материалов и технологий строительства жилых и нежилых помещений, 
+                    здания из кирпича не утратили своей популярности.
+                </p> 
+            </div>
+            <div class="worktype-foot-btn">
+                <a href="" class="btn">Читать в блоге</a>
+            </div>
+        </div>
+    </div>
+    <div class="divide-line"></div>
+    <div class="home-line-describe">
+        <div class="container">
+            <h2>Проекты кирпичных домов</h2>
+            <p>
+                Современная популярность кирпича как строительного материала для возведения как жилых, 
+                так и нежилых помещений появилась из того, что этот строительный материал в прямом смысле проверен временем. 
+                Многие старинные постройки, которые были выстроены из кирпича, сохранились в прекрасном состоянии и именно потому, 
+                что этот строительный материал имеет значительный запас прочности.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="projects projects-home">
+    <div class="container">
+    {# <h2>Проекты</h2> #}
+    <div class="wrapper-all">
+        {# <div class="wrap-header">
+            <h1>НОВЫЕ И ПОПУЛЯРНЫЕ</h1>
+        </div> #}
+        <div class="wrap-projects">
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom4.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom1.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom2.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom3.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom5.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom6.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="wrap-foot">
+            <div class="wrap-foot-left">
+                <p>В этом разделе можно заказать типовые проекты в готовом виде, а так же с возможностью внесения идивидуальных изменений</p>
+            </div>
+            <div class="wrap-foot-right">
+                <a href="" class="btn btn--black">Смотреть все проекты</a>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+</section>
+<section class="slogan-line-3">
+<section class="container">
+    <div class="slogan-3">
+        <div class="slogan-caption"><p>Есть предложение от конкурента?</p> </div> 
+        <div class="h1"> <p> МЫ <span class="sand-color"> СДЕЛАЕМ ЛУЧШЕ!</span></p><a href="" style="text-transform: none;" class="btn btn--white">Заказать расчет стоимости</a> </div>    
+    </div>
+</section>
+</section>
+<section class="blog-useful">
+    <div class="container">
+        <div class="blog-useful-left">
+            <div class="blog-useful-left-wrap">
+                <p>Полезное и интересное о строительстве и не только</p>
+                <a href="" class="frame">
+                    <div class="frame-arrow">
+                        <div class="frame-arrow-item"></div>
+                    </div>
+                    <div class="frame-text">
+                        <h3>читать в блоге</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="blog-useful-right">
+            <div class="blog-item">
+                <div class="project-item-img">
+                    <img src="../img/dom1.jpg" alt="">
+                </div>
+                <div class="blog-header">
+                    <p>очень странный дом</p>
+                </div>
+                <div class="blog-subheader">
+                    <p>А мы всеравно строим</p>
+                </div>
+                <div class="blog-text">
+                    <p>
+                    Технология горизонтально направленого бурения 
+                    позволяет оперативно и безопасно проложить 
+                    инженерные коммуникации, не меняя окружающий
+                    </p>
+                </div>
+                <div class="span-nav">
+                    <a href=""><span>Подробнее</span></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <div class="project-item-img">
+                    <img src="../img/dom2.jpg" alt="">
+                </div>
+                <div class="blog-header">
+                    <p>дом за неделю</p>
+                </div>
+                <div class="blog-subheader">
+                    <p>А мы всеравно строим</p>
+                </div>
+                <div class="blog-text">
+                    <p>
+                    Технология горизонтально направленого бурения 
+                    позволяет оперативно и безопасно проложить 
+                    инженерные коммуникации, не меняя окружающий
+                    </p>
+                </div>
+                <div class="span-nav">
+                    <a href=""><span>Подробнее</span></a> 
+                </div>
+            </div>
+            <div class="blog-item">
+                <div class="project-item-img">
+                    <img src="../img/dom3.jpg" alt="">
+                </div>
+                <div class="blog-header">
+                    <p>бронированный забор</p>
+                </div>
+                <div class="blog-subheader">
+                    <p>А мы всеравно строим</p>
+                </div>
+                <div class="blog-text">
+                    <p>
+                    Технология горизонтально направленого бурения 
+                    позволяет оперативно и безопасно проложить 
+                    инженерные коммуникации, не меняя окружающий
+                    </p>
+                </div>
+                <div class="span-nav">
+                    <a href=""><span>Подробнее</span></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery gallery-home">
+    <div class="container"><span>галерея</span></div>
+    <section class="gallery-grid">
+        <p style="text-align: right; padding: 0 10px 35px 0">В этот разделе вы найдете фотографии проектов кирпичных домов, строительство которых реализовано нашей компанией</p>
+        <div class="grid-container">
+            <div class="first">
+                <a href="" class="img-s">
+                    <img src="/img/dom1.jpg" alt="">
+                </a>
+                <a href=""class="gallery-blog">
+                    <div class="build-home">
+                        <h3> Строящиейся<br/>и построенные дома</h3>
+                        <span class="span-ease">Подробнее</span>
+                    </div>
+                </a>
+            </div>
+            <div class="second">
+                <a href="" class="img-s">
+                    <img src="/img/dom2.jpg" alt="">
+                </a>
+            </div>
+            <div class="third">
+                <a href="" class="img-s">
+                    <img src="/img/dom3.jpg" alt="">
+                </a>
+                <a href="" class="img-s">
+                    <img src="/img/dom5.jpg" alt="">
+                </a>
+            </div>
+            <div class="five">
+                <a href="" class="img-s">
+                    <img src="/img/dom4.jpg" alt="">
+                </a>
+            </div>
+            <div class="six">
+                <a href="" class="img-s">
+                    <img src="/img/dom6.jpg" alt="">
+                </a>
+                <div class="gallery-frame">
+                    <a href="" class="frame-quad" >
+                        <div class="frame">
+                            <div class="frame-arrow">
+                                <div class="frame-arrow-item"></div>
+                            </div>
+                            <div class="frame-text">
+                                <h3>смотреть портфолио</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="four">
+                <a href="" class="img-s">
+                    <img src="/img/dom8.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery-card">
+                <a href="" class="project-item">
+                    <div class="project-item-img">
+                        <img src="../img/dom4.jpg" alt="">
+                    </div>
+                    <div class="project-item-describe">
+                        <div class="project-item-describe-head">
+                            <div class="head-header">
+                                <p><span class="sand-color">проект</span> голубая мечта</p>
+                            </div>
+                            <div class="head-subheader">
+                                <p>Материал: стекло, бетон</p>
+                            </div>
+                        </div>
+                        <div class="project-item-describe-foot">
+                            <div class="project-item-describe-foot-left">
+                                <span class="icon-svg3"></span><p>2</p><span class="icon-svg2"></span><p>2</p><p>количество комнат - 8</p>
+                            </div>
+                            <div class="project-item-describe-foot-right">
+                                <span class="sand-color">350 m<sup>2</sup></span><p>2 этажа</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item-cont">
+                        <span class="span-ease">Подробнее</span>
+                    </div>
+                    
+                </a>
+            </div>
+          </div>
+    </section>
+    {# <div class="gallery-subtext">
+        <div class="gallery-subtext-text">
+            <p>Технология горизонтально направленого бурения позволяет оперативно и безопасно проложить инженерные коммуникации, не меняя окружающий ландшафт. Риск возникновения аварийных ситуаций при горизонтально направленном бурении сводится к нулю, а готовый трубопровод не нуждается в контроле, ремонте и не требует иных эксплуатационных расходов.
+            </p> 
+        </div>
+    </div> #}
+</section>
+<section class="blog-news home-news">
+    <div class="container-news">
+        <div class="news-line"></div>
+        <div class="blog-wrap">
+            <div class="blog-item">
+                <div class="blog-header">
+                    <p>Зима пришла</p>
+                </div>
+                <div class="blog-subheader">
+                    <p>А мы всеравно строим</p>
+                </div>
+                <div class="blog-date date">
+                    <p>22 сент. 2019</p>
+                </div>
+                <div class="blog-text">
+                    <p>
+                    Технология горизонтально направленого бурения 
+                    позволяет оперативно и безопасно проложить 
+                    инженерные коммуникации, не меняя окружающий
+                    </p>
+                </div>
+                <div class="span-nav">
+                    <a href=""><span>Подробнее</span></a>
+                </div>
+            </div>
+            <div class="blog-item">
+                <div class="blog-header">
+                    <p>Новые высоты с новым краном</p>
+                </div>
+                <div class="blog-subheader">
+                    {# <p>А мы всеравно строим</p> #}
+                </div>
+                <div class="blog-date date">
+                    <p>22 сент. 2019</p>
+                </div>
+                <div class="blog-text">
+                    <p>
+                    Технология горизонтально направленого бурения 
+                    позволяет оперативно и безопасно проложить 
+                    инженерные коммуникации, не меняя окружающий
+                    </p>
+                </div>
+                <div class="span-nav">
+                   <a href=""><span>Подробнее</span></a> 
+                </div>
+            </div>
+        </div>
+        <div class="other-news">
+            <div class="other-news-wrap">
+                <a href="" class="other-news-wrap-iner">
+                    <p>Вам интересно?</p>
+                    <h3>Читайте другие <br/> статьи в новостях</h3>
+                    <div class="right-arrow"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="news-footer-info">
+    <div class="container-news">
+        <h2> всё, что необходимо знать о строительстве из кирпича </h2>
+        <div class="sub-describe">
+            <div class="sub-describe-left">
+                <p>
+                    Это далеко не полный список преимуществ кирпичных домов. 
+                    Стоит разобраться подробнее во всех преимуществах, которые несет в себе постройка дома из кирпича. 
+                    В первую очередь, следует особо выделить долговечность и прочность конструкций из кирпича. 
+                    Все дело в том, что во многих странах на протяжении многих столетий постройки из этого материала являлись и 
+                    являются по сей день крайне востребованными именно потому, что такое здание может даже без ремонта фасада 
+                    простоять более 100 лет без видимых разрушений. Известно немало примеров не только архитектурных памятников, 
+                    которые были выстроены более 300 лет назад, но и немало жилых домов из кирпича, которые были возведены несколько 
+                    столетий назад, но при этом и сейчас остаются пригодными для эксплуатации. Кирпичные дома не подвержены 
+                    разрушительному влиянию различных насекомых и патогенных грибков. Кроме того, кирпич не разрушается под 
+                    прямыми солнечными лучами и даже не теряет своего внешнего вида. <br/>
+                    Помимо всего прочего, здания из кирпича отличаются способностью выдерживать самые разнообразные катаклизмы, 
+                    в том числе значительные землетрясения, наводнения и прочие природные катастрофы. 
+                    Отдельно необходимо отметить крайне высокую морозостойкость кирпича. Под термином «морозостойкость»
+                    понимается способность материала сохранять свои свойства даже после определенного количества циклов замораживания и оттаивания.
+                    В действительности существует различные марки этого строительного материала, 
+                    каждая из которых имеет свои характеристики морозостойкости.
+                    Кроме того, современные люди обращают внимание на такой параметр строительного материала, как экологичность. 
+                    В этом плане кирпич и здания, построенные из него, вне всяких похвал.
+                    Экологичность материала
+                    Кирпич состоит из песка, глины и воды, что делает его экологически чистым материалом.
+                    Все дело в том, что кирпич изготавливается из песка, глины и воды. Могут в него включаться и 
+                    дополнительные компоненты, но это негативным образом не влияет на качество кирпича.
+                    Выделяется также пожаробезопасность кирпича, ведь, в отличие от древесины, которая в последнее время приобрела 
+                    значительную популярность, так как является на 100% экологически чистым материалом, кирпичные дома не могут сгореть дотла во время 
+                    пожара.
+                    Кирпич не горит, поэтому неспособен поддерживать процесс распространения пожара, что значительно повышает 
+                    шансы на сохранение материальных ценностей. В то же время при влиянии больших температур кирпич примерно на 60% теряет свой 
+                    запас прочности, что ведет к тому, что срок эксплуатации кирпичных стен короба дома значительно уменьшится.
+                </p>
+            </div>
+            <div class="sub-describe-right">
+                <p>
+                    Учитывая, что современные люди выбирают строительство домов именно из кирпича, 
+                    необходимо также рассмотреть все имеющиеся недостатки этого материала. 
+                    ак и любой другой строительный материл, кирпич не является идеальным, и имеются определенные моменты, 
+                    которые необходимо учитывать перед тем,как начать строительство.
+                </p>
+                <p>
+                    В первую очередь, следует учитывать, что дома из кирпича требуют дополнительной довольно затратной внутренней отделки. 
+                    Все дело в том, что цементный раствор, который служит скрепляющим элементом при кладке кирпича, отличается достаточно высокой 
+                    теплопродимостью, поэтому дом будет холодным, если 
+                    Помимо сего прочего, необходимо учитывать, что кирпичный дом является крайне тяжелой конструкцией, 
+                    под которую необходимо 
+                    обустраивать надежный мощный фундамент, так как в противном случае дом будет проседать, и в итоге по 
+                    кирпичной кладке пойдут значительные трещины.
+                    Траты на заливку фундамента, необходимого для возведения стен из кирпича, могут стать непосильным финансовым 
+                    бременем, поэтому этот момент необходимо учесть до начала строительства.
+                    Помимо всего прочего, следует учитывать, что проектированием кирпичного дома должен заниматься профессионал, 
+                    так как ошибки в расчете фундамента и несущих стен в этом случае могут быть просто фатальными.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partners home-partners">
+    <div class="swiper-slider swiper-slider--review"
+        data-slider-slides-per-view="1"
+        data-slider-centered-slides="false"
+        data-slider-slides-per-group="1"
+        data-slider-effect="slide"
+        data-slider-loop="true"
+        data-slider-autoplay="false"
+        data-slider-speed="600"
+        data-slider-grabcursor="false"
+        data-slider-space-between="0">
+        <div class="swiper-container">
+            <div class="partners-wrapper-left swiper-wrapper">
+                {# <div class="swiper-container"> #}
+                    <div class="partners-wrapper-left-img swiper-slide" data-counter-name="01">
+                        <img src="../img/logo1.png" alt="">
+                    </div>
+                    <div class="partners-wrapper-left-img swiper-slide" data-counter-name="02">
+                        <img src="../img/logo2.png" alt="">
+                    </div>
+                    <div class="partners-wrapper-left-img swiper-slide" data-counter-name="03">
+                        <img src="../img/logo3.png" alt="">
+                    </div>
+                    {# <div class="partners-wrapper-left-img">
+                        <img src="../img/logo4.png" alt="">
+                    </div>
+                    <div class="partners-wrapper-left-img">
+                        <img src="../img/logo1.png" alt="">
+                    </div>
+                    <div class="partners-wrapper-left-img">
+                        <img src="../img/logo2.png" alt="">
+                    </div>
+                    <div class="partners-wrapper-left-img">
+                        <img src="../img/logo5.png" alt="">
+                    </div> #}
+                {# </div> #}
+            </div>
+        </div>
+        <div class="partners-wrapper-right">
+            <div class="partners-wrapper-right-text">
+                <h2>наши партнеры</h2>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

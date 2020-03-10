@@ -116,6 +116,28 @@ Buttons
             background: $color1!important;
         }
     }
+    &--brown {
+        background: #c08860!important;
+        color: $color1 !important;
+        border: 2px solid #c08860;
+
+        &:hover {
+            color: #c08860 !important;
+            background: $color1!important;
+            border: 2px solid #c08860;
+        }
+    }
+    &--gray {
+        background: #b4b0b2!important;
+        color: $color1 !important;
+        border: 2px solid #b4b0b2;
+
+        &:hover {
+            color: #b4b0b2 !important;
+            background: $color1!important;
+            border: 2px solid #b4b0b2;
+        }
+    }
 
     &--no-arr{
         &:after{

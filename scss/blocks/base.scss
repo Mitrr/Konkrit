@@ -103,6 +103,7 @@ body {
   padding-top: 50px;
   // padding-bottom: 100px;
   a {
+    position: relative;
     text-decoration: none;
     color: $color5;
     transition: ease-in-out .5s;
@@ -110,18 +111,18 @@ body {
       content: '\e800';
       display: inline-block;
       vertical-align: middle;
-      margin-left: 14px;
-      position: relative;
-      top: 0px;
       font-size: 12px;
       font-family: fontello;
       transition: ease-in-out .5s;
+      position: absolute;
+      bottom: 2px;
+      right: -14px;
   }
   &:hover {
       color: #82bac3;
       text-decoration: underline;
       &::after {
-        margin-left: 19px;
+        transform: translateX(4px);
       }
   }
   }

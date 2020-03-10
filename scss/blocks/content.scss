@@ -1030,7 +1030,28 @@
         .project-item-img img {
           filter: grayscale(0);
         }
+      }
+      &:last-child {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -40px;
+          right: -25px;
+          height: 4px;
+          width: 50px;
+          background-color: #82bac3e0;
         }
+        &::after {
+          content: '';
+          position: absolute;
+          top: -17px;
+          right: -50px;
+          height: 4px;
+          width: 50px;
+          background-color: #82bac3e0;
+          transform: rotate(90deg);
+        }
+      }
       .project-item-img {
         height: 140px;
         overflow: hidden;
