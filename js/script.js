@@ -130,10 +130,10 @@ $(window).on("resize orientationchange", function (e) {
 
 function bind_widgets() {
     img_to_bg();
-    //slider_init();
+    slider_init();
     fancybox_init();
     //gmap_load();
-    validate_init();
+    //validate_init();
     mask_init();
     checkbox_plain_init();
     //sliceSlider_init();
