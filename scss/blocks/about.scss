@@ -1734,9 +1734,26 @@
     margin-bottom: 115px;
     .gallery-grid {
         margin: 40px auto 0px auto;
-        .frame-quad {
+        .gallery-frame {
+            position: relative;
             &::after {
                 height: 250vw;
+                content: '';
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                background-color: #52afb92e;
+                z-index: 1;
+                top: 100%;
+            }
+        }
+        .gallery-card {
+            z-index: 2;
+            position: relative;
+        }
+        .frame-quad {
+            &::after {
+                content: none;
             }
         }
     }
@@ -1771,13 +1788,14 @@
         .other-news {
             flex: 1;
             display: flex;
-            background-color: #52afb92e;
+            // background-color: #52afb92e;
             max-width: 300px;
             &-wrap {
                 display: flex;
                 height: 100%;
                 width: 100%;
                 padding: 0 50px 53px 50px;
+                z-index: 2;
                 &-iner {
                     height: 100%;
                     width: 100%;
@@ -1830,6 +1848,8 @@
 .news-footer-info {
     background-color: white;
     padding: 88px 0 20px 0;
+    z-index: 2;
+    position: relative;
     .container-news {
         max-width: 1560px;
         margin: 0 auto;
@@ -1864,6 +1884,55 @@
 }
 .home-partners {
     margin: 0% auto 2% auto;
-    padding: 2% 0;
+    padding: 5% 0;
     border-top: 1px solid #80808026;
+}
+
+.swiper-slider {
+    max-width: 1580px;
+    justify-content: space-between;
+    width: 100%;
+    .swiper-right-angle {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -56px;
+            right: -54px;
+            height: 4px;
+            width: 55px;
+            background-color: #82bac3e0;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -80px;
+            height: 4px;
+            width: 55px;
+            background-color: #82bac3e0;
+            transform: rotate(90deg);
+        }
+    }
+    .swiper-container {
+        max-width: 1160px;
+        // flex: 4;
+        // margin-left: -40px;
+        
+        .swiper-wrapper {
+            .swiper-slide {
+                // max-width: 150px;
+                // padding: 0 20px;
+            }
+            .partners-wrapper-left-img img{
+                max-width: 150px;
+            }
+        }
+    }
+    .partners-wrapper-right {
+        max-width: 300px;
+        width: 100%;
+        flex: none;
+        z-index: 2;
+    }
 }

@@ -7874,6 +7874,7 @@ Responsive Helpers
   background: url("../img/footer.jpg") no-repeat;
   position: relative;
   background-size: 100% 100%;
+  z-index: 2;
 }
 
 @media (max-width: 780px) {
@@ -13707,8 +13708,28 @@ Responsive Helpers
   margin: 40px auto 0px auto;
 }
 
-.gallery-home .gallery-grid .frame-quad::after {
+.gallery-home .gallery-grid .gallery-frame {
+  position: relative;
+}
+
+.gallery-home .gallery-grid .gallery-frame::after {
   height: 250vw;
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  background-color: #52afb92e;
+  z-index: 1;
+  top: 100%;
+}
+
+.gallery-home .gallery-grid .gallery-card {
+  z-index: 2;
+  position: relative;
+}
+
+.gallery-home .gallery-grid .frame-quad::after {
+  content: none;
 }
 
 .home-news {
@@ -13759,7 +13780,6 @@ Responsive Helpers
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #52afb92e;
   max-width: 300px;
 }
 
@@ -13770,6 +13790,7 @@ Responsive Helpers
   height: 100%;
   width: 100%;
   padding: 0 50px 53px 50px;
+  z-index: 2;
 }
 
 .home-news .container-news .other-news-wrap-iner {
@@ -13838,6 +13859,8 @@ Responsive Helpers
 .news-footer-info {
   background-color: white;
   padding: 88px 0 20px 0;
+  z-index: 2;
+  position: relative;
 }
 
 .news-footer-info .container-news {
@@ -13880,8 +13903,60 @@ Responsive Helpers
 
 .home-partners {
   margin: 0% auto 2% auto;
-  padding: 2% 0;
+  padding: 5% 0;
   border-top: 1px solid #80808026;
+}
+
+.swiper-slider {
+  max-width: 1580px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-slider .swiper-right-angle {
+  position: relative;
+}
+
+.swiper-slider .swiper-right-angle::before {
+  content: '';
+  position: absolute;
+  top: -56px;
+  right: -54px;
+  height: 4px;
+  width: 55px;
+  background-color: #82bac3e0;
+}
+
+.swiper-slider .swiper-right-angle::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -80px;
+  height: 4px;
+  width: 55px;
+  background-color: #82bac3e0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.swiper-slider .swiper-container {
+  max-width: 1160px;
+}
+
+.swiper-slider .swiper-container .swiper-wrapper .partners-wrapper-left-img img {
+  max-width: 150px;
+}
+
+.swiper-slider .partners-wrapper-right {
+  max-width: 300px;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
