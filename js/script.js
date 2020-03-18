@@ -133,7 +133,7 @@ function bind_widgets() {
     slider_init();
     fancybox_init();
     //gmap_load();
-    //validate_init();
+    validate_init();
     mask_init();
     checkbox_plain_init();
     //sliceSlider_init();

@@ -16,7 +16,7 @@
         .header-logo {
             flex: 1;
             display: flex;
-            justify-content: center;
+            justify-content: space-betweens;
             align-items: center;
             img {
                 @media (min-width: 1040px) and (max-width: 1200px) {

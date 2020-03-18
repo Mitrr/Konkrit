@@ -4695,14 +4695,14 @@ td { vertical-align: top; }
   font-family: "BebasNeueBold";
   font-style: normal;
   font-weight: 600;
-  src: url("../font/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeueBold.woff") format("woff"), url("../font/BebasNeueBold.svg#BebasNeueBold") format("svg");
+  src: url("../font/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeueBold.woff") format("woff"), url("../font/BebasNeueBold.ttf") format("truetype"), url("../font/BebasNeueBold.svg#BebasNeueBold") format("svg");
 }
 
 @font-face {
   font-family: "BebasNeue";
   font-style: normal;
   font-weight: 400;
-  src: url("../font/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeueRegular.woff") format("woff"), url("../font/BebasNeueRegular.svg#BebasNeue") format("svg");
+  src: url("../font/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../font/BebasNeueRegular.woff") format("woff"), url("../font/BebasNeueRegular.ttf") format("truetype"), url("../font/BebasNeueRegular.svg#BebasNeue") format("svg");
 }
 
 @font-face {
@@ -11323,9 +11323,9 @@ Responsive Helpers
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-betweens;
+      -ms-flex-pack: space-betweens;
+          justify-content: space-betweens;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -11448,7 +11448,7 @@ Responsive Helpers
           justify-content: flex-end;
 }
 
-.header-about .header-about-h1 h1 {
+.header-about .header-about-h1 h1, .header-about .header-about-h1 .h1 {
   font-family: "BebasNeueBold", sans-serif;
   font-size: 60px;
   margin: 50px 0 0 0;

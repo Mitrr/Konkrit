@@ -12,8 +12,8 @@ $color7: #323232;
 
 $ts: 0.3s;
 
-@include font-face("BebasNeueBold", '../font/BebasNeueBold', 600, normal, $file-formats: eot woff svg);
-@include font-face("BebasNeue", '../font/BebasNeueRegular', 400, normal, $file-formats: eot woff svg);
+@include font-face("BebasNeueBold", '../font/BebasNeueBold', 600, normal, $file-formats: eot woff ttf svg);
+@include font-face("BebasNeue", '../font/BebasNeueRegular', 400, normal, $file-formats: eot woff ttf svg);
 
 
 @font-face {
