@@ -435,6 +435,14 @@
                     font-family: "BebasNeueBold", sans-serif;
                     line-height: 1.3;
                 }
+                @media(max-width: 900px) {
+                    h3 {
+                        font-size: 18px;
+                    }
+                    .span-ease {
+                        font-size: 14px;
+                    }
+                }
               }
             @media (min-width: 650px) {
                 flex: 1;
