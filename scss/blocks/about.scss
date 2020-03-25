@@ -435,6 +435,14 @@
                     font-family: "BebasNeueBold", sans-serif;
                     line-height: 1.3;
                 }
+                @media(max-width: 900px) {
+                    h3 {
+                        font-size: 18px;
+                    }
+                    .span-ease {
+                        font-size: 14px;
+                    }
+                }
               }
             @media (min-width: 650px) {
                 flex: 1;
@@ -1579,6 +1587,7 @@
 .home {
     &::before {
         background-image: url('../img/sloy15-1.jpg') !important;
+        background-size: cover !important;
     }
     .container {
         .header-offer-main {
@@ -1628,7 +1637,7 @@
             left: 49px;
             height: 4px;
             width: 50px;
-            background-color: #ffffffad;
+            background-color: #d2d1d1;
             transform: rotate(-40deg);
           }
           &:after {
@@ -1638,7 +1647,7 @@
             left: 13px;
             height: 4px;
             width: 50px;
-            background-color: #ffffffad;
+            background-color: #d2d1d1;
             transform: rotate(40deg);
           }
     }
@@ -1889,9 +1898,10 @@
 }
 
 .swiper-slider {
-    max-width: 1580px;
-    justify-content: space-between;
-    width: 100%;
+    max-width: 1160px;
+    // max-width: 1580px;
+    // justify-content: space-between;
+    // width: 100%;
     .swiper-right-angle {
         position: relative;
         &::before {
@@ -1928,11 +1938,310 @@
                 max-width: 150px;
             }
         }
+    }   
+}
+.partners-wrapper-right {
+    max-width: 300px;
+    width: 100%;
+    flex: none;
+    z-index: 2;
+}
+
+// Страница project-home
+.project-home {
+    margin-top: 70px;
+    h2 {
+        margin: 0;
+        line-height: 1;
     }
-    .partners-wrapper-right {
-        max-width: 300px;
-        width: 100%;
-        flex: none;
-        z-index: 2;
+    p {
+        line-height: 2;
+        margin: 5px 0 20px 0;
+    }
+    .portfolio-detail-header {
+        margin-bottom: 80px;
+        &-left {
+            max-width: 630px;
+            &-img {
+                height: 435px;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        &-right {
+            overflow: hidden;
+            p {
+                max-width: none;
+            }
+            .right-wrap {
+                padding-right: 0;
+                &:first-child {
+                    max-width: 630px;
+                    margin-bottom: 60px;
+                }
+                p {
+                    line-height: 2;
+                    // margin-top: 25px;
+                    margin-block-start: 0;
+                    margin: 15px 0 12px 0;
+                }
+                .right-wrap-item {
+                    .swiper-slider .swiper-container {
+                        max-width: 580px;
+                        .swiper-slide {
+                            // max-width: 130px;
+                            .partners-wrapper-left-img {
+                                width: 135px;
+                                height: 90px;
+                                margin: 0;
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .describe-home {
+        margin-top: 40px;
+        p, h2 {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            font-family: "BebasNeueBold", sans-serif;
+        }
+        &-up {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            &-right {
+                text-align: right;
+                font-family: "BebasNeueBold", sans-serif;
+                p {
+                  font-size: 24px; 
+                  line-height: 1.4;
+                  color: #838383; 
+                }
+                
+            }
+        }
+        &-down {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ababab;
+            &-left {
+                h2 {
+                    color: #838383; 
+                }
+            }
+            &-right {
+                display: flex;
+                margin-top: 20px;
+                p {
+                    font-size: 18px;
+                    font-family: "BebasNeueBold", sans-serif;
+                    color: #838383; 
+                    &:first-child {
+                        margin-right: 10px;
+                    }
+                    span {
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+        .describe-btn {
+            margin-top: 50px;
+        }
     }
 }
+.projects-tabs {
+    background-color: #f1f4f4;
+    .container {
+        h2 {
+            font-family: "BebasNeueBold", sans-serif;
+            font-size: 24px;
+            line-height: 1;
+            margin: 15px 0 0 0;
+            color: #585858;
+            &:first-child {
+                margin: 0;
+                color: #82bac3;
+            }
+        }
+        p {
+            max-width: 960px;
+            line-height: 1.7;
+            margin: 50px 0 0 0;
+        }
+    }
+    .describe-container {
+        padding: 70px 0 0 0;
+    }
+    .tabs-container {
+        margin: 80px 0 0 0;
+        padding: 0 0 60px 0;
+        .tabs-list {
+            display: flex;
+            li {
+                padding: 0 30px 0 30px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: fit-content;
+                cursor: pointer; 
+                h3, a {
+                    font-size: 16px;
+                    color: #585858;
+                    margin: 0;
+                    text-decoration: none;
+                    &:hover {
+                        color: #82bac3;
+                    }
+                    
+                }
+                .trin {
+                    display: none;
+                } 
+            }
+            
+            .active {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: fit-content;
+                h3 {
+                    position: relative;
+                    color: #82bac3;
+                    
+                }
+                .trin {
+                    display: block;
+                    position: absolute;
+                    bottom: -95px;
+                    border: 65px solid transparent;
+                    border-bottom: 80px solid white;
+                }
+            }
+            
+        }
+    }
+}
+.projects-tabs-content {
+    .tab-cont {
+        display: none;
+    }
+    .active {
+        display: block;
+        animation: appear ease-in-out 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: scale(0.97);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    ul {
+        margin-top: 50px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #abababa6;
+        li {
+            max-width: 950px;
+            margin: 0 0 15px 0;
+            text-indent: -17px;
+            line-height: 1.7;
+            color: #585858;
+            &:before {
+              position: relative;
+              top: -1px;
+              display: inline-block;
+              vertical-align: middle;
+              width: 5px;
+              height: 5px;
+              background: #82bac3;
+              border-radius: 50%;
+              margin-right: 12px;
+              font-size: 9px;
+              line-height: 1;
+              letter-spacing: 0;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-indent: 0;
+              content: "";
+            }
+        }
+    }
+    .sub-tabs {
+        max-width: 950px;
+        p {
+            padding: 45px 0;
+            line-height: 1.7;
+            color: #585858;
+            font-style: italic;
+        }
+    }
+}
+.gallery-project-home {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 70px;
+        span {
+            letter-spacing: 6px;
+            &::after {
+                content: none;
+            }
+            .icon-down-open-big {
+                font-size: 75px;
+            }
+        }
+    }
+    .gallery-grid {
+        margin: 50px auto 80px auto;
+        .frame-quad {
+            &::after {
+                content: none;
+            }
+        }
+        .build-home {
+            .gallery-card {
+                .project-item-describe {
+                    padding: 6%;
+                    max-height: none;
+                    border: none;
+                    .describe-foot-p {
+                        font-size: 24px;
+                        font-family: "BebasNeueBold", sans-serif;
+                        font-weight: 400;
+                        line-height: 1.3;
+                        color: #a3a2a2;
+                        text-transform: uppercase;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        .first {
+            .img-s {
+                height: auto;
+            }
+        }
+    }
+}
+  

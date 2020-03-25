@@ -27,6 +27,7 @@
     display: flex;
     margin: 0 auto;
     padding: 10px;
+    flex-wrap: wrap;
     .footer-header {
       h2 {
         font-size: 16px;
@@ -37,7 +38,7 @@
     &-left {
       flex: 2;
       position: relative;
-
+      min-width: 490px;
       .lists {
         position: relative;
         display: flex;
@@ -80,6 +81,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      min-width: 490px;
       form {
         display: flex;
         flex-direction: column;
@@ -296,6 +298,56 @@
       text-decoration: none;
       display: block;
       margin-top: 10px;
+    }
+  }
+  @media (max-width: 1160px) {
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      &-left, &-middle {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: $mobile-small) {
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      &-left, &-middle {
+        width: 100%;
+        min-width: initial;
+      }
+      &-left {
+        .footer-nav {
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+              margin: 0 8px 10px 0;
+              min-width: 75px;
+            }
+          }
+        }
+        .footer-service, .footer-home {
+          li {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: white;
+          }
+        }
+        .lists {
+          flex-wrap: wrap;
+        }
+      }
+      &-middle {
+        form {
+          margin: 50px 11px;
+        }
+      }
     }
   }
 }

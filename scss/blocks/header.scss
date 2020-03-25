@@ -20,10 +20,11 @@
   // }
   .container .header-offer-main {
     display: flex;
-    .header-offer-left, .header-offer-right {
-      flex: 1;
-    }
+    flex-wrap: wrap;
     .header-offer-left {
+      min-width: 532px;
+      flex: 1;
+      height: 450px;
       .header-offer-text {
         display: flex;
         flex-direction: row;
@@ -92,6 +93,12 @@
       
     }
     .header-offer-right {
+      min-width: 400px;
+      flex: 1;
+      .header-offer-img {
+        display: flex;
+        justify-content: flex-end;
+      }
       .header-offer-text {
         padding: 30px 23px;
         line-height: 24px;
@@ -419,7 +426,7 @@
     display: block;
     height: 4px;
     width: 36px;
-    background: $color1;
+    background: #848484;
   }
 
   &-bun-top {
