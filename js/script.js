@@ -120,7 +120,6 @@ function init_event_handlers() {
     });
 
 
-
 }
 
 $(window).on("resize orientationchange", function (e) {
@@ -163,4 +162,4 @@ const allTabs = () => {
         })
     }
 }
-allTabs()
+allTabs();

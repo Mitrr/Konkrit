@@ -647,6 +647,28 @@ function ajaxHandlersInit(){
     });
 
 
+    $(document).on("click",".blog-like-handler",function (e) {
+        var self = $(this);
+        var type = $(this).data("type");
+        var id = $(this).data("id");
+
+        var data = {
+            type: type,
+            id: id
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/ajax/blog_like.php",
+            data: data,
+            success: function(data) {
+                self.parent().html("<h2>Спасибо за ваше мнение!</h2>")
+            }
+        });
+
+    });
+
+
 }
     
 function img_to_bg($o) {
@@ -1342,28 +1364,12 @@ function ymap_load(){
 
     var items;
 
-    $.ajax({
-        type: "POST",
-        url: "/ajax/get_markers.php",
-        data: "",
-        dataType: "json",
-        success: function(data) {
-            items = data;
-        },
-        error: function(data) {
-            $(form).find('.js-form-submit').text('Произошла ошибка');
-            setTimeout(function() {
-                $(form).find('.js-form-submit').text('Отправить');
-            }, 2000);
-        }
-    });
-
     ymaps.ready(init);
 
     function init() {
         var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9,
+            center: [55.930335, 37.736973],
+            zoom: 13,
             controls: ['smallMapDefaultSet']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -1374,91 +1380,31 @@ function ymap_load(){
         var arPlace = [];
 
 
-        for (var i = 0, l = items.length; i < l; i++) {
-            createMenuGroup(items[i],i);
-        }
 
-        function createMenuGroup (item,i) {
+        createPlaceMarks();
 
 
-            placemark = new ymaps.Placemark(item.center, {
-                hintContent: item.name,
-                balloonContent: item.name
+        function createPlaceMarks () {
+
+
+            placemark = new ymaps.Placemark([55.930335, 37.736973], {
+                hintContent: "Компания конкрит",
+                balloonContent: "Московская область, город Мытищи, улица Кедрина, дом 3"
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/local/templates/gnb/img/i10.svg',
-                iconImageSize: [30, 30],
+                iconImageHref: '/local/templates/Konkrit/img/fav.png',
+                iconImageSize: [35, 30],
                 iconImageOffset: [-14, -26]
-            });
-
-            placemark.events.add(['click'],  function (e) {
-                $(".geo-list a").removeClass("active");
-                $(".geo-list a[data-id="+ item.id +"]").addClass("active");
-
-                var data = {
-                    "ID": item.id
-                };
-                $.ajax({
-                    type: "POST",
-                    url: "/ajax/get_object.php",
-                    data: data,
-                    success: function(res) {
-                        $("#geo-item-outer").html(res);
-                    },
-                    error: function(res) {
-                        $(form).find('.js-form-submit').text('Произошла ошибка');
-                        setTimeout(function() {
-                            $(form).find('.js-form-submit').text('Отправить');
-                        }, 2000);
-                    }
-                });
-
             });
 
             arPlace.push(placemark);
 
             collection.add(placemark);
 
-
-
-
-            var menuItem = $('<div><a class="get-object" href="javascript:;" data-id="'+item.id+'">' + item.name + '</a></div>');
-            menuItem.appendTo(".geo-list>div").find("a").bind('click', function () {
-                if (!arPlace[i].balloon.isOpen()) {
-                    arPlace[i].balloon.open();
-                    $(".geo-list a").removeClass("active");
-                    $(this).addClass("active");
-
-                    var data = {
-                        "ID": item.id
-                    };
-                    $.ajax({
-                        type: "POST",
-                        url: "/ajax/get_object.php",
-                        data: data,
-                        success: function(res) {
-                            $("#geo-item-outer").html(res);
-                        },
-                        error: function(res) {
-                            $(form).find('.js-form-submit').text('Произошла ошибка');
-                            setTimeout(function() {
-                                $(form).find('.js-form-submit').text('Отправить');
-                            }, 2000);
-                        }
-                    });
-
-                } else {
-                    $(this).removeClass("active");
-                    arPlace[i].balloon.close();
-                    $("#geo-item-outer").html("");
-                }
-                return false;
-            });
-
         }
 
         myMap.geoObjects.add(collection);
-        myMap.setBounds(myMap.geoObjects.getBounds());
+
     }
 }
 
@@ -1768,7 +1714,6 @@ function init_event_handlers() {
     });
 
 
-
 }
 
 $(window).on("resize orientationchange", function (e) {
@@ -1811,5 +1756,5 @@ const allTabs = () => {
         })
     }
 }
-allTabs()
+allTabs();
 //# sourceMappingURL=build.js.map

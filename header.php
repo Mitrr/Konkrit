@@ -53,7 +53,7 @@ Loc::loadLanguageFile(__FILE__);
 </div>
 <div class="respon-meter"></div>
 
-<div class="wrap" id="top">
+<section class="wrap" id="top">
 
     <header class="header">
         <div class="container">
@@ -165,22 +165,21 @@ Loc::loadLanguageFile(__FILE__);
         </header>
 
     <?else:?>
-        <section class="blog-detail-header">
-            <div class="header-about">
-                <div class="container">
-                    <div class="header-about-h1">
-                        <div class="h1"><?=$APPLICATION->ShowViewContent("h1")?></div>
-                    </div>
-                    <?$APPLICATION->IncludeComponent(
-                        "bitrix:breadcrumb",
-                        "breadcrumb",
-                        Array(
-                            "PATH" => "",
-                            "SITE_ID" => SITE_ID,
-                            "START_FROM" => "0"
-                        )
-                    );?>
+        <section class="header-about <?=$APPLICATION->ShowViewContent("headerclass")?>">
+            <div class="container">
+                <div class="header-about-h1">
+                    <div class="h1"><?=$APPLICATION->ShowViewContent("h1")?></div>
                 </div>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:breadcrumb",
+                    "breadcrumb",
+                    Array(
+                        "PATH" => "",
+                        "SITE_ID" => SITE_ID,
+                        "START_FROM" => "0"
+                    )
+                );?>
             </div>
         </section>
+
     <?endif;?>

@@ -37,5 +37,27 @@ function ajaxHandlersInit(){
     });
 
 
+    $(document).on("click",".blog-like-handler",function (e) {
+        var self = $(this);
+        var type = $(this).data("type");
+        var id = $(this).data("id");
+
+        var data = {
+            type: type,
+            id: id
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/ajax/blog_like.php",
+            data: data,
+            success: function(data) {
+                self.parent().html("<h2>Спасибо за ваше мнение!</h2>")
+            }
+        });
+
+    });
+
+
 }
     
