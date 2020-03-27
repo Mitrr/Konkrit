@@ -84,9 +84,13 @@ foreach($arResult["ITEMS"] as $arItem):?>
                 </a>
             <?endif;?>
                 <?if ($i==0):?>
-                    <a href="/portfolio/?FLTR_33_2944839123=Y&set_filter=Подобрать" target="_blank" class="gallery-blog">
+                    <a href="<?=($arParams["FOLIO_LINK"]!="")?$arParams["FOLIO_LINK"]:"/portfolio/?FLTR_33_2944839123=Y&set_filter=Подобрать"?>" target="_blank" class="gallery-blog">
                         <div class="build-home">
+                            <?if ($arParams["FOLIO_TITLE"]!=""):?>
+                            <h3><?=$arParams["~FOLIO_TITLE"]?></h3>
+                            <?else:?>
                             <h3>Строящиейся<br/>и построенные дома</h3>
+                            <?endif;?>
                             <span class="span-ease">Подробнее</span>
                         </div>
                     </a>

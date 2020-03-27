@@ -1680,11 +1680,17 @@
     .worktype-item {
         flex-direction: column;
         margin-right: 45px;
+        width: 120px;
+
+        &:last-child{
+            margin-right: 0;
+        }
     }
     .worktype-foot {
         display: flex;
         margin-bottom: 75px;
         &-text {
+            margin-top: 20px;
             flex: 2;
             p {
                 max-width: 750px;

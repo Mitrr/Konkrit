@@ -163,6 +163,7 @@ Loc::loadLanguageFile(__FILE__);
                 </div>
             </div>
         </header>
+    <?elseif($_SERVER["REAL_FILE_PATH"] == "/uslugi/index.php"):?>
 
     <?else:?>
         <section class="header-about <?=$APPLICATION->ShowViewContent("headerclass")?>">

@@ -137,29 +137,29 @@ function bind_widgets() {
     checkbox_plain_init();
     //sliceSlider_init();
     //ui_slider_init();
+    allTabs();
 }
 
 // projects inputs
 
-let updateTextInput = val => document.getElementById(`input-text-${val.className.substr(-1)}`).value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
-let updateRange = val => document.getElementsByClassName(`input-range-${val.id.substr(-1)}`)[0].value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
+//let updateTextInput = val => document.getElementById(`input-text-${val.className.substr(-1)}`).value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+//let updateRange = val => document.getElementsByClassName(`input-range-${val.id.substr(-1)}`)[0].value=val.value.replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
 
 // project-home tabs
 
 const allTabs = () => {
-    let tabs = document.getElementsByClassName('tab')
-    let tabsContent = document.getElementsByClassName('tab-cont')
+    let tabs = document.getElementsByClassName('tab');
+    let tabsContent = document.getElementsByClassName('tab-cont');
     for (let [index, tab] of [...tabs].entries()) {
         tab.addEventListener('click', function() {
             for(tab of tabs) {
                 tab.classList.remove('active')
             }
             for(tabsCont of tabsContent){
-                tabsCont.classList.remove('active')
-                tabsContent[index].classList.add('active')
+                tabsCont.classList.remove('active');
+                tabsContent[index].classList.add('active');
             }
             this.classList.add('active')
         })
     }
 }
-allTabs();
