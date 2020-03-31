@@ -1798,6 +1798,7 @@ let updateRange = val => document.getElementsByClassName(`input-range-${val.id.s
 const allTabs = () => {
     let tabs = document.getElementsByClassName('tab')
     let tabsContent = document.getElementsByClassName('tab-cont')
+    let tabsA = document.getElementsByClassName('tab-a')
     for (let [index, tab] of [...tabs].entries()) {
         tab.addEventListener('click', function() {
             for(tab of tabs) {
@@ -1810,6 +1811,42 @@ const allTabs = () => {
             this.classList.add('active')
         })
     }
+    for (let [index, tab] of [...tabsA].entries()) {
+        tab.addEventListener('click', function() {
+            for(tab of tabsA) {
+                tab.classList.remove('active')
+            }
+            for(tabsCont of tabsContent){
+                tabsCont.classList.remove('active')
+                tabsContent[index].classList.add('active')
+            }
+            this.classList.add('active')
+        })
+    }
 }
 allTabs()
+
+const swiper = new Swiper('.swiper-project-home', {
+    // Default parameters
+    // slidesPerView: 1,
+    // spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      }
+    }
+  })
 //# sourceMappingURL=build.js.map
