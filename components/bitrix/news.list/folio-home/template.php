@@ -81,6 +81,9 @@ foreach($arResult["ITEMS"] as $arItem):?>
             <?else:?>
                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" target="_blank" class="img-s">
                     <img src="<?=$arItem["DETAIL_PICTURE"]["RESIZE_URL"]?>" alt="<?=$arItem["NAME"]?>">
+                    <div class="img-s--hover">
+                        <div><?=$arItem["NAME"]?></div>
+                    </div>
                 </a>
             <?endif;?>
                 <?if ($i==0):?>
@@ -89,7 +92,7 @@ foreach($arResult["ITEMS"] as $arItem):?>
                             <?if ($arParams["FOLIO_TITLE"]!=""):?>
                             <h3><?=$arParams["~FOLIO_TITLE"]?></h3>
                             <?else:?>
-                            <h3>Строящиейся<br/>и построенные дома</h3>
+                            <h3>Строящиеся<br/>и построенные дома</h3>
                             <?endif;?>
                             <span class="span-ease">Подробнее</span>
                         </div>

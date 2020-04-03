@@ -1385,8 +1385,8 @@ function ymap_load(){
 
     function init() {
         var myMap = new ymaps.Map('map', {
-            center: [55.930335, 37.736973],
-            zoom: 13,
+            center: [58.637982, 49.578829],
+            zoom: 14,
             controls: ['smallMapDefaultSet']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -1404,9 +1404,9 @@ function ymap_load(){
         function createPlaceMarks () {
 
 
-            placemark = new ymaps.Placemark([55.930335, 37.736973], {
-                hintContent: "Компания конкрит",
-                balloonContent: "Московская область, город Мытищи, улица Кедрина, дом 3"
+            placemark = new ymaps.Placemark([58.637982, 49.578829], {
+                hintContent: "Компания Конкрит",
+                balloonContent: "Киров, п. Ганино, улица Тарасовская, дом 10"
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: '/local/templates/Konkrit/img/fav.png',

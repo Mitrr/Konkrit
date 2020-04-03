@@ -38,7 +38,7 @@ $this->setFrameMode(true);
 
                     <?
                     $arCur = current($arItem["VALUES"]);
-                    $separate = round(count($arItem["VALUES"])/5);
+                    $separate = round(count($arItem["VALUES"])/4);
                     switch ($arItem["DISPLAY_TYPE"]):
                     case "B":
                         ?>

@@ -17,4 +17,40 @@ foreach ($arResult["PROPERTIES"]["IMG"]["VALUE"] as $k=>$val){
     $arResult["PROPERTIES"]["IMG"]["BIG"][$k] = $img["src"];
 
 }
+
+foreach ($arResult["PROPERTIES"]["IMG2"]["VALUE"] as $k=>$val){
+    $img = CFile::ResizeImageGet($val, array('width'=>800, 'height'=>800), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG2"]["RESIZE"][$k] = $img["src"];
+
+    $img = CFile::ResizeImageGet($val, array('width'=>1600, 'height'=>1600), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG2"]["BIG"][$k] = $img["src"];
+
+}
+
+foreach ($arResult["PROPERTIES"]["IMG3"]["VALUE"] as $k=>$val){
+    $img = CFile::ResizeImageGet($val, array('width'=>800, 'height'=>800), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG3"]["RESIZE"][$k] = $img["src"];
+
+    $img = CFile::ResizeImageGet($val, array('width'=>1600, 'height'=>1600), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG3"]["BIG"][$k] = $img["src"];
+
+}
+
+foreach ($arResult["PROPERTIES"]["IMG4"]["VALUE"] as $k=>$val){
+    $img = CFile::ResizeImageGet($val, array('width'=>800, 'height'=>800), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG4"]["RESIZE"][$k] = $img["src"];
+
+    $img = CFile::ResizeImageGet($val, array('width'=>1600, 'height'=>1600), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG4"]["BIG"][$k] = $img["src"];
+
+}
+
+foreach ($arResult["PROPERTIES"]["IMG5"]["VALUE"] as $k=>$val){
+    $img = CFile::ResizeImageGet($val, array('width'=>800, 'height'=>800), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG5"]["RESIZE"][$k] = $img["src"];
+
+    $img = CFile::ResizeImageGet($val, array('width'=>1600, 'height'=>1600), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+    $arResult["PROPERTIES"]["IMG5"]["BIG"][$k] = $img["src"];
+
+}
 ?>

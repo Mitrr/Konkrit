@@ -22,7 +22,7 @@ Loc::loadLanguageFile(__FILE__);
 <head>
     <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <?/*<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">*/?>
     <title><?$APPLICATION->ShowTitle()?></title>
     <?=$APPLICATION->ShowHead();?>
 
@@ -84,7 +84,8 @@ Loc::loadLanguageFile(__FILE__);
                                         array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/phones.php"), false);?>
                                 </div>
                                 <div class="social-adress">
-                                    <p>Киров, <br/> Р.Люксембург, 100</p>
+                                    <?$APPLICATION->IncludeComponent("bitrix:main.include", "",
+                                        array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR."include/address.php"), false);?>
                                 </div>
                             </div>
                         </div>

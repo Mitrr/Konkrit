@@ -360,6 +360,34 @@
         align-items: center;
         justify-content: center;
         flex: 1;
+        &--hover{
+            position: absolute;
+            bottom:0;
+            left: 0;
+            background: rgba($color1,0.8);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: all .3s;
+
+            div{
+                font-size: 16px;
+                line-height: 1.4;
+                font-family: $font1;
+                font-weight: 400;
+                color:$color0;
+                text-align: center;
+            }
+        }
+
+        &:hover{
+            .img-s--hover{
+                transform: translateY(0%);
+            }
+        }
     }
     .grid-container {
         display: grid;
@@ -1466,6 +1494,7 @@
     }
     &-header {
         display: flex;
+        margin-bottom: 80px;
         &-left {
             flex: 1;
 
@@ -1488,7 +1517,8 @@
     .container-right {
         // height: 500px;
         max-width: 1340px;
-        margin: 0 auto 0 210px;
+        transform: translateX(40px);
+        margin: 0 auto 0 auto;
         h3 {
             margin: 50px 0 30px 0;
         }

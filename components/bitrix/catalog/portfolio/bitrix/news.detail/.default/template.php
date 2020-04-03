@@ -70,13 +70,13 @@ $this->setFrameMode(true);
         <?$i=0;
         foreach ($arResult["PROPERTIES"]["IMG"]["VALUE"] as $k=>$val):?>
 
-            <?if ($i==1):?>
+            <?if ($i==1 ):?>
                 </div><div class="eight">
             <?elseif($i==2):?>
                 </div><div class="nine">
             <?elseif($i==4):?>
                 </div><div class="ten">
-            <?elseif($i==5):?>
+            <?elseif($i==5 ):?>
             </div></div><div class="grid-container-2"><div class="seven">
                 <?elseif($i==6):?>
             </div><div class="eight">
@@ -97,13 +97,182 @@ $this->setFrameMode(true);
         </div>
     </div>
     <?endif;?>
-
+        <?if ($arResult["PROPERTIES"]["TEXT3"]["~VALUE"]["TEXT"]!=""):?>
         <div class="sub-describe-2">
             <?if ($arResult["PROPERTIES"]["TITLE3"]["VALUE"]!=""):?>
                 <h3><?=$arResult["PROPERTIES"]["TITLE3"]["VALUE"]?></h3>
             <?endif;?>
             <?=$arResult["PROPERTIES"]["TEXT3"]["~VALUE"]["TEXT"]?>
         </div>
+        <?endif;?>
+
+        <?if (!empty($arResult["PROPERTIES"]["IMG2"]["VALUE"])):?>
+            <div class="gallery-grid">
+                <div class="grid-container-2">
+                    <div class="seven">
+                        <?$i=0;
+                        foreach ($arResult["PROPERTIES"]["IMG2"]["VALUE"] as $k=>$val):?>
+
+                        <?if ($i==1 ):?>
+                    </div><div class="eight">
+                        <?elseif($i==2):?>
+                    </div><div class="nine">
+                        <?elseif($i==4):?>
+                    </div><div class="ten">
+                        <?elseif($i==5 ):?>
+                    </div></div><div class="grid-container-2"><div class="seven">
+                        <?elseif($i==6):?>
+                    </div><div class="eight">
+                        <?elseif($i==7):?>
+                    </div><div class="nine">
+                        <?elseif($i==9):?>
+                    </div><div class="ten">
+                        <?elseif($i==10):
+                            break;?>
+                        <?endif;?>
+
+                        <a href="javascript;;" data-fancybox="gal" data-src="<?=$arResult["PROPERTIES"]["IMG2"]["BIG"][$k]?>" class="img-s">
+                            <img src="<?=$arResult["PROPERTIES"]["IMG2"]["RESIZE"][$k]?>" alt="">
+                        </a>
+                        <?$i++;
+                        endforeach;?>
+                    </div>
+                </div>
+            </div>
+        <?endif;?>
+
+
+        <?if ($arResult["PROPERTIES"]["TEXT4"]["~VALUE"]["TEXT"]!=""):?>
+            <div class="sub-describe-2">
+                <?if ($arResult["PROPERTIES"]["TITLE4"]["VALUE"]!=""):?>
+                    <h3><?=$arResult["PROPERTIES"]["TITLE4"]["VALUE"]?></h3>
+                <?endif;?>
+                <?=$arResult["PROPERTIES"]["TEXT4"]["~VALUE"]["TEXT"]?>
+            </div>
+        <?endif;?>
+
+        <?if (!empty($arResult["PROPERTIES"]["IMG3"]["VALUE"])):?>
+            <div class="gallery-grid">
+                <div class="grid-container-2">
+                    <div class="seven">
+                        <?$i=0;
+                        foreach ($arResult["PROPERTIES"]["IMG3"]["VALUE"] as $k=>$val):?>
+
+                        <?if ($i==1 ):?>
+                    </div><div class="eight">
+                        <?elseif($i==2):?>
+                    </div><div class="nine">
+                        <?elseif($i==4):?>
+                    </div><div class="ten">
+                        <?elseif($i==5 ):?>
+                    </div></div><div class="grid-container-2"><div class="seven">
+                        <?elseif($i==6):?>
+                    </div><div class="eight">
+                        <?elseif($i==7):?>
+                    </div><div class="nine">
+                        <?elseif($i==9):?>
+                    </div><div class="ten">
+                        <?elseif($i==10):
+                            break;?>
+                        <?endif;?>
+
+                        <a href="javascript;;" data-fancybox="gal" data-src="<?=$arResult["PROPERTIES"]["IMG3"]["BIG"][$k]?>" class="img-s">
+                            <img src="<?=$arResult["PROPERTIES"]["IMG3"]["RESIZE"][$k]?>" alt="">
+                        </a>
+                        <?$i++;
+                        endforeach;?>
+                    </div>
+                </div>
+            </div>
+        <?endif;?>
+
+        <?if ($arResult["PROPERTIES"]["TEXT5"]["~VALUE"]["TEXT"]!=""):?>
+            <div class="sub-describe-2">
+                <?if ($arResult["PROPERTIES"]["TITLE5"]["VALUE"]!=""):?>
+                    <h3><?=$arResult["PROPERTIES"]["TITLE5"]["VALUE"]?></h3>
+                <?endif;?>
+                <?=$arResult["PROPERTIES"]["TEXT5"]["~VALUE"]["TEXT"]?>
+            </div>
+        <?endif;?>
+
+        <?if (!empty($arResult["PROPERTIES"]["IMG4"]["VALUE"])):?>
+            <div class="gallery-grid">
+                <div class="grid-container-2">
+                    <div class="seven">
+                        <?$i=0;
+                        foreach ($arResult["PROPERTIES"]["IMG4"]["VALUE"] as $k=>$val):?>
+
+                        <?if ($i==1 ):?>
+                    </div><div class="eight">
+                        <?elseif($i==2):?>
+                    </div><div class="nine">
+                        <?elseif($i==4):?>
+                    </div><div class="ten">
+                        <?elseif($i==5 ):?>
+                    </div></div><div class="grid-container-2"><div class="seven">
+                        <?elseif($i==6):?>
+                    </div><div class="eight">
+                        <?elseif($i==7):?>
+                    </div><div class="nine">
+                        <?elseif($i==9):?>
+                    </div><div class="ten">
+                        <?elseif($i==10):
+                            break;?>
+                        <?endif;?>
+
+                        <a href="javascript;;" data-fancybox="gal" data-src="<?=$arResult["PROPERTIES"]["IMG4"]["BIG"][$k]?>" class="img-s">
+                            <img src="<?=$arResult["PROPERTIES"]["IMG4"]["RESIZE"][$k]?>" alt="">
+                        </a>
+                        <?$i++;
+                        endforeach;?>
+                    </div>
+                </div>
+            </div>
+        <?endif;?>
+
+        <?if ($arResult["PROPERTIES"]["TEXT6"]["~VALUE"]["TEXT"]!=""):?>
+            <div class="sub-describe-2">
+                <?if ($arResult["PROPERTIES"]["TITLE6"]["VALUE"]!=""):?>
+                    <h3><?=$arResult["PROPERTIES"]["TITLE6"]["VALUE"]?></h3>
+                <?endif;?>
+                <?=$arResult["PROPERTIES"]["TEXT6"]["~VALUE"]["TEXT"]?>
+            </div>
+        <?endif;?>
+
+        <?if (!empty($arResult["PROPERTIES"]["IMG5"]["VALUE"])):?>
+            <div class="gallery-grid">
+                <div class="grid-container-2">
+                    <div class="seven">
+                        <?$i=0;
+                        foreach ($arResult["PROPERTIES"]["IMG5"]["VALUE"] as $k=>$val):?>
+
+                        <?if ($i==1 ):?>
+                    </div><div class="eight">
+                        <?elseif($i==2):?>
+                    </div><div class="nine">
+                        <?elseif($i==4):?>
+                    </div><div class="ten">
+                        <?elseif($i==5 ):?>
+                    </div></div><div class="grid-container-2"><div class="seven">
+                        <?elseif($i==6):?>
+                    </div><div class="eight">
+                        <?elseif($i==7):?>
+                    </div><div class="nine">
+                        <?elseif($i==9):?>
+                    </div><div class="ten">
+                        <?elseif($i==10):
+                            break;?>
+                        <?endif;?>
+
+                        <a href="javascript;" data-fancybox="gal" data-src="<?=$arResult["PROPERTIES"]["IMG5"]["BIG"][$k]?>" class="img-s">
+                            <img src="<?=$arResult["PROPERTIES"]["IMG5"]["RESIZE"][$k]?>" alt="">
+                        </a>
+                        <?$i++;
+                        endforeach;?>
+                    </div>
+                </div>
+            </div>
+        <?endif;?>
 
 
     </div>

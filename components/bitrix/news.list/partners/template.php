@@ -32,7 +32,7 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
 
-        <div class="partners-wrapper-left-img swiper-slide">
+        <div class="partners-wrapper-left-img swiper-slide grayscale">
             <img src="<?=$arItem["PREVIEW_PICTURE"]["RESIZE_URL"]?>" alt="<?=$arItem["NAME"]?>">
         </div>
 

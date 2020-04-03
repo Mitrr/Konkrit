@@ -29,30 +29,39 @@ foreach($arResult["ITEMS"] as $arItem):?>
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
             <?if ($i==2):?>
-            </div><div class="second">
-            <?elseif($i==3):?>
-            </div><div class="third">
-            <?elseif($i==5):?>
-            </div><div class="five">
-            <?elseif($i==6):?>
-            </div><div class="six">
-            <?elseif($i==8):?>
             </div><div class="four">
-            <?elseif($i==9):?>
+            <?elseif($i==3):?>
+            </div><div class="five">
+            <?elseif($i==4):?>
+            </div><div class="second">
+            <?elseif($i==5):?>
             </div><div class="gallery-card">
+            <?elseif($i==6):?>
+            </div><div class="third">
+            <?elseif($i==8):?>
+            </div><div class="six">
             <?elseif($i==10):?>
             </div></div>
-            <div class="grid-container-2">
-                    <div class="seven">
-            <?elseif($i==11):?>
-            </div><div class="eight">
+            <div class="grid-container">
+                    <div class="first">
             <?elseif($i==12):?>
-            </div><div class="nine">
+            </div><div class="four">
             <?elseif($i==13):?>
-            </div><div class="ten">
+            </div><div class="five">
+            <?elseif($i==14):?>
+            </div><div class="second">
+            <?elseif($i==15):?>
+            </div><div class="gallery-card">
+                    <?elseif($i==16):?>
+                </div><div class="third">
+                    <?elseif($i==18):?>
+                </div><div class="six">
             <?endif;?>
                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" target="_blank" class="img-s">
                     <img src="<?=$arItem["DETAIL_PICTURE"]["RESIZE_URL"]?>" alt="<?=$arItem["NAME"]?>">
+                    <div class="img-s--hover">
+                        <div><?=$arItem["NAME"]?></div>
+                    </div>
                 </a>
 
 

@@ -53,7 +53,13 @@ $this->setFrameMode(true);
                             <?endif;?>
                         </div>
                         <div class="describe-home-down-right">
-                            <p><span class="icon-svg3"></span>2</p><p><span class="icon-svg2"></span>2</p>
+                            <?if ($arResult["PROPERTIES"]["BEDROOM"]["VALUE"]!=""):?>
+                            <p><span class="icon-svg3"></span><?=$arResult["PROPERTIES"]["BEDROOM"]["VALUE"]?></p>
+                            <?endif;?>
+                            <?if ($arResult["PROPERTIES"]["BATH"]["VALUE"]!=""):?>
+                            <p><span class="icon-svg2"></span><?=$arResult["PROPERTIES"]["BATH"]["VALUE"]?></p>
+                            <?endif;?>
+
                         </div>
                     </div>
                     <div class="describe-btn">
@@ -83,7 +89,7 @@ $this->setFrameMode(true);
                                         <?foreach ($arResult["PROPERTIES"]["VISUAL"]["VALUE"] as $k=>$val):?>
                                             <div class="swiper-slide">
                                                 <div class="partners-wrapper-left-img ">
-                                                    <a href="javascript:;" data-fancybox="" data-src="<?=$arResult["PROPERTIES"]["VISUAL"]["BIG"][$k]?>">
+                                                    <a href="javascript:;" data-fancybox="3d" data-src="<?=$arResult["PROPERTIES"]["VISUAL"]["BIG"][$k]?>">
                                                     <img src="<?=$arResult["PROPERTIES"]["VISUAL"]["RESIZE"][$k]?>" alt="<?=$arResult["NAME"]?>">
                                                     </a>
                                                 </div>
@@ -114,7 +120,7 @@ $this->setFrameMode(true);
                                             <?foreach ($arResult["PROPERTIES"]["FACADE"]["VALUE"] as $k=>$val):?>
                                                 <div class="swiper-slide">
                                                     <div class="partners-wrapper-left-img ">
-                                                        <a href="javascript:;" data-fancybox="" data-src="<?=$arResult["PROPERTIES"]["FACADE"]["BIG"][$k]?>">
+                                                        <a href="javascript:;" data-fancybox="facade" data-src="<?=$arResult["PROPERTIES"]["FACADE"]["BIG"][$k]?>">
                                                             <img src="<?=$arResult["PROPERTIES"]["FACADE"]["RESIZE"][$k]?>" alt="<?=$arResult["NAME"]?>">
                                                         </a>
                                                     </div>
@@ -145,7 +151,7 @@ $this->setFrameMode(true);
                                             <?foreach ($arResult["PROPERTIES"]["PLAN"]["VALUE"] as $k=>$val):?>
                                                 <div class="swiper-slide">
                                                     <div class="partners-wrapper-left-img ">
-                                                        <a href="javascript:;" data-fancybox="" data-src="<?=$arResult["PROPERTIES"]["PLAN"]["BIG"][$k]?>">
+                                                        <a href="javascript:;" data-fancybox="plan" data-src="<?=$arResult["PROPERTIES"]["PLAN"]["BIG"][$k]?>">
                                                             <img src="<?=$arResult["PROPERTIES"]["PLAN"]["RESIZE"][$k]?>" alt="<?=$arResult["NAME"]?>">
                                                         </a>
                                                     </div>

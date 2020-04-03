@@ -1,33 +1,38 @@
 {
-  "name": "creditbroker",
+  "name": "konkrit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Konkrit site",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "./node_modules/.bin/gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mitrr/Konkrit.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mitrr/Konkrit/issues"
+  },
+  "homepage": "https://github.com/Mitrr/Konkrit#readme",
   "dependencies": {
-    "browser-sync": "^2.24.4",
-    "express": "^4.16.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "browser-sync": "^2.26.7",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-plumber": "^1.2.0",
-    "gulp-rewrite-css": "^1.1.1",
-    "gulp-sass": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rewrite-css": "^1.1.2",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemap": "^1.0.1",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-twig": "^1.2.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^5.0.0",
-    "natives": "^1.1.6",
-    "npm": "^6.0.0",
-    "sass": "^1.3.2",
-    "twig": "^1.11.0"
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.26.3",
+    "twig": "^1.15.0"
   }
 }
