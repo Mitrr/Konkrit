@@ -1773,6 +1773,18 @@ const allTabs = () => {
             this.classList.add('active')
         })
     }
+    for (let [index, tab] of [...tabsA].entries()) {
+        tab.addEventListener('click', function() {
+            for(tab of tabsA) {
+                tab.classList.remove('active')
+            }
+            for(tabsCont of tabsContent){
+                tabsCont.classList.remove('active')
+                tabsContent[index].classList.add('active')
+            }
+            this.classList.add('active')
+        })
+    }
 }
 
 //# sourceMappingURL=build.js.map

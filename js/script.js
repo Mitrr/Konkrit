@@ -148,8 +148,9 @@ function bind_widgets() {
 // project-home tabs
 
 const allTabs = () => {
-    let tabs = document.getElementsByClassName('tab');
-    let tabsContent = document.getElementsByClassName('tab-cont');
+    let tabs = document.getElementsByClassName('tab')
+    let tabsContent = document.getElementsByClassName('tab-cont')
+    let tabsA = document.getElementsByClassName('tab-a')
     for (let [index, tab] of [...tabs].entries()) {
         tab.addEventListener('click', function() {
             for(tab of tabs) {
@@ -158,6 +159,18 @@ const allTabs = () => {
             for(tabsCont of tabsContent){
                 tabsCont.classList.remove('active');
                 tabsContent[index].classList.add('active');
+            }
+            this.classList.add('active')
+        })
+    }
+    for (let [index, tab] of [...tabsA].entries()) {
+        tab.addEventListener('click', function() {
+            for(tab of tabsA) {
+                tab.classList.remove('active')
+            }
+            for(tabsCont of tabsContent){
+                tabsCont.classList.remove('active')
+                tabsContent[index].classList.add('active')
             }
             this.classList.add('active')
         })
